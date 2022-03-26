@@ -16,7 +16,12 @@
 #### Features
 
 <menu>
+	<li>Advanced project structure SASS/Pug/Gulp </li>
 	<li></li>
+	<li></li>
+	<li></li>
+	<li>Downloaded icons separately to minify KBs</li>
+	<li>Used Gulp to compress images to minify MBs for the max limit!</li>
 </menu>
 
 <br>
