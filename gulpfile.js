@@ -49,10 +49,10 @@ gulp.task("jsTask", () => {
 // compress images Task
 gulp.task("imgTask", () => {
   return gulp
-    .src("build/images/*.*")
+    .src("build/assets/images/*.*")
     .pipe(imagemin())
     .pipe(webp())
-    .pipe(gulp.dest("dist/images"));
+    .pipe(gulp.dest("dist/assets/images"));
 });
 
 gulp.task("rootImgTask", () => {
@@ -100,8 +100,8 @@ gulp.task("watchTask", () => {
   );
 
   // watch Images
-  watch("build/images/**/*.*", series("imgTask"));
-  watch("build/preview.png", series("rootImgTask"));
+  watch("build/assets/images/**/*.*", series("imgTask"));
+  watch("build/assets/preview.png", series("rootImgTask"));
 });
 
 export default series(
