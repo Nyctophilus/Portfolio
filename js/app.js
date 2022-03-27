@@ -1,2 +1,2 @@
-
+const Toggle=()=>{document.body.classList.toggle("light")},selectorId=e=>document.getElementById(`${e}`),selectorUni=e=>document.querySelector(`${e}`),selectorG=e=>Array.from(document.querySelectorAll(`${e}`));selectorId("light-toggler").addEventListener("click",Toggle),selectorG(".controls .control").forEach((e=>{e.addEventListener("click",(()=>{selectorG(".controls .control").forEach((e=>{e.classList.remove("active")})),selectorId(e.dataset.sect).classList.add("active")}))}));
 //# sourceMappingURL=app.js.map
