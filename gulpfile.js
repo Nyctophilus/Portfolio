@@ -25,7 +25,7 @@ gulp.task("pugTask", () => {
 // Sass Task
 gulp.task("scssTask", () => {
   return gulp
-    .src("build/sass/**/*.scss", { sourcemaps: true })
+    .src("build/sass/main.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(
       gulpAutoprefixer({
