@@ -20,7 +20,7 @@
 	<li></li>
 	<li></li>
 	<li></li>
-	<li>Downloaded icons separately to minify KBs</li>
+	<li>Downloaded icons separately to minify KBs... considering SVGs</li>
 	<li>Used Gulp to compress images to minify MBs for the max limit!</li>
 </menu>
 
@@ -29,12 +29,15 @@
 
 #### TODO:
 
+- [x] dw hover interchange clrs
+- [x] dark toggle functionlity
+- [x] smiley faces home bg
 - [ ] 9 dots Menu on mobile
 - [ ] Hexagon hover
 - [ ] one-section on bigger devices
 - [ ] loading state with animated word
-- [ ] smiley faces/Spinners at certificates section
-- [ ] eye follow at contact section
+- [ ] Spinners at certificates section
+- [ ] eye follow at contact section --Contact me word
 
 <br>
 <br>
