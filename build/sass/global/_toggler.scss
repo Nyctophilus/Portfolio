@@ -1,0 +1,23 @@
+.light-toggler {
+  @include iconCover;
+  margin-bottom: unset !important;
+
+  right: 2rem;
+  position: absolute;
+  top: 5%;
+  z-index: 99;
+  width: 5rem;
+  height: 5rem;
+  .icon {
+    font-size: 2.5em;
+  }
+}
+
+body.light {
+  .light-toggler.control {
+    &:hover,
+    &:active {
+      background-color: var(--theme-clr);
+    }
+  }
+}

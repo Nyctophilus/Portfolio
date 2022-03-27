@@ -1,0 +1,17 @@
+// framework
+.active {
+  display: initial;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.img-res {
+  max-width: 100%;
+  height: auto;
+}
+.img-rounded {
+  border-radius: 3rem;
+}

@@ -1,0 +1,9 @@
+.controls {
+  position: fixed;
+  right: 2rem;
+  top: 30%;
+  z-index: 99;
+  .control {
+    @include iconCover;
+  }
+}

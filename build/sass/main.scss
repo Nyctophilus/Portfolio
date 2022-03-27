@@ -1,6 +1,9 @@
-img {
-  max-height: 70vh;
-}
-h1 {
-  color: red;
-}
+@import "global/globals";
+@import "helpers/mixins";
+@import "global/framework";
+
+@import "moon-icons/style.scss";
+@import "global/_toggler";
+@import "global/_controls";
+
+@import "pages/home";

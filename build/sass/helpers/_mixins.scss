@@ -1,0 +1,40 @@
+@mixin iconCover {
+  background-color: var(--bg-clr-alt);
+  border-radius: 50%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--trans);
+
+  .icon {
+    font-size: 1.5rem;
+    color: var(--txt-clr);
+    cursor: pointer;
+  }
+  &:not(:last-of-type) {
+    margin-bottom: 1rem;
+  }
+  &:hover {
+    background-color: var(--theme-clr);
+    transform: scale(1.05);
+    .icon {
+      color: white;
+    }
+  }
+  &.active {
+    background-color: var(--theme-clr);
+  }
+}
+
+@mixin specialBG {
+  background: var(--grad-clr);
+  padding: 2rem;
+  position: absolute;
+  clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  gap: 3rem;
+}

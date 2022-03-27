@@ -1,0 +1,80 @@
+$clr1: #a07850;
+$clr2: #c35353;
+
+.smileys {
+  height: 100vh;
+  width: 20vw;
+  @include specialBG;
+
+  .smile {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+
+    input[type="radio"] {
+      appearance: none;
+
+      &:hover ~ .face::after {
+        border-radius: 0 0 1rem 1rem;
+        height: 1rem;
+        transform: translateX(-50%) translateY(0.65rem);
+        width: 1.8rem;
+      }
+
+      &:hover ~ .face::before {
+        height: 5px;
+        transform: translate(0, 5px);
+      }
+    }
+    .face {
+      position: absolute;
+      inset: 0;
+      background: #333;
+      border-radius: 50%;
+      mix-blend-mode: lighten;
+      transition: all var(--trans);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--bg-clr);
+        opacity: 0.5;
+        transition: all var(--trans);
+      }
+
+      &::before {
+        border-radius: 50%;
+        box-shadow: 22px 0 0 var(--bg-clr);
+        height: 10px;
+        left: 10px;
+        top: 14px;
+        width: 10px;
+      }
+
+      &::after {
+        border-radius: 8px;
+        bottom: 14px;
+        height: 4px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all var(--trans);
+        width: 20px;
+      }
+    }
+
+    &:nth-child(odd) input:hover ~ .face {
+      background-color: $clr1;
+      filter: drop-shadow(0 0 50px $clr1)
+        drop-shadow(0 0 100px $clr1)
+        drop-shadow(0 0 150px $clr1);
+    }
+    &:nth-child(even) input:hover ~ .face {
+      background-color: $clr2;
+      filter: drop-shadow(0 0 50px $clr2)
+        drop-shadow(0 0 100px $clr2)
+        drop-shadow(0 0 150px $clr2);
+    }
+  }
+}

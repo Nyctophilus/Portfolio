@@ -7,16 +7,37 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/main.css">
   </head>
-  <body> 
-    <header> 
-      <div class="me">
-         <img src="assets/me.webp" alt="Picture of Muhammed yusry">
-        <h1>hello</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod a quam quia earum deserunt? Laborum at iusto, corrupti nobis doloribus dicta voluptatibus voluptatum saepe natus, blanditiis in dolorum magnam aliquid.</p>
-      </div>
-    </header>
+  <body>
+    <div class="light-toggler control" id="light-toggler"><i class="icon icon-light1"></i></div>
+    <div class="controls"> 
+      <div class="control" data-sect="home"><i class="icon icon-home"></i></div>
+      <div class="control" data-sect="about"><i class="icon icon-user"></i></div>
+      <div class="control" data-sect="portfolio"><i class="icon icon-suitcase"></i></div>
+      <div class="control" data-sect="certfs"><i class="icon icon-document-certificate"></i></div>
+      <div class="control" data-sect="contact"><i class="icon icon-email"></i></div>
+    </div>
     <main> 
-      <h1>mainnnnnnnnnnnnnnnnnnnn </h1>
+      <section class="home active" id="home">
+        <div class="smileys"></div>
+        <div class="content grid-2"><img class="me1 img-res img-rounded" src="assets/images/MoFay1.webp" alt="Picture of muhammedYosry">
+          <div class="text-content">
+            <h1>Hola, I'm <span>Muhammed Yousry</span><br><small>Front-end Web Developer</small></h1>
+            <p>I'm Computer Engineering graduate specializing in Web Development. I fond of creating beautiful fluid eye-pleasing websites. I‘m a highly motivated <span>Agilist</span> developer. I'm Looking forward to be <span>MERN</span> Stack developer. Awkwardly, I love Javascript! I keen on learning new Techs and tools. I dedicated -easily- 6h/day. You can say it's more like a hobbit to me now. Also reading books has became one of my newest interests!💡</p>
+            <button>
+              <p>Download CV</p><a href="https://drive.google.com/file/d/1Y-ahO39ItNKFV7UqDRl9DwEa03Z2E2mc/view?usp=sharing" target="_blank"><i class="icon icon-download"> </i></a>
+            </button>
+          </div>
+        </div>
+        <div class="smileys parti"><label class="smile">
+<input type="radio"/>
+<div class="face"></div>
+</label><label class="smile">
+<input type="radio"/>
+<div class="face"></div>
+</label>
+        </div>
+      </section>
     </main>
+    <script src="js/app.js"> </script>
   </body>
 </html>

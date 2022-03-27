@@ -1,0 +1,25 @@
+mixin controls 
+	.controls 
+		.control(data-sect="home"): i(class="icon icon-home" )
+		.control(data-sect="about"): i(class="icon icon-user" )
+		.control(data-sect="portfolio"): i(class="icon icon-suitcase" )
+		.control(data-sect="certfs"): i(class="icon icon-document-certificate" )
+		.control(data-sect="contact"): i(class="icon icon-email" )
+
+mixin lightToggler
+	div(class="light-toggler control" id="light-toggler"): i(class="icon icon-light1")
+
+
+mixin downloadBtn 
+	button
+		p Download CV
+		a(href="https://drive.google.com/file/d/1Y-ahO39ItNKFV7UqDRl9DwEa03Z2E2mc/view?usp=sharing" target="_blank"): i(class="icon icon-download") 
+
+
+mixin smileys(n)
+	- for (let i = 0; i < n; i++){
+		<label class="smile">
+			<input type="radio"/>
+			<div class="face"></div>
+		</label>
+	- }

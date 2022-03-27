@@ -1,0 +1,100 @@
+body {
+  section.home {
+    @import "../helpers/smileys";
+
+    .content {
+      height: 100vh;
+      z-index: 2;
+      position: relative;
+      .me1 {
+        align-self: center;
+        max-height: 90vh;
+        margin-inline: auto;
+      }
+
+      .text-content {
+        align-self: center;
+        padding-right: 10rem;
+
+        h1 {
+          font: {
+            size: 3rem;
+            weight: bold;
+          }
+          span {
+            color: var(--theme-clr);
+          }
+          small {
+            font-size: 50%;
+          }
+        }
+        p {
+          span {
+            color: var(--theme-clr);
+          }
+        }
+
+        button {
+          padding: 0.7rem 5rem 0.7rem 2rem;
+          background-color: transparent;
+          border: 1px solid var(--theme-clr);
+          border-radius: 1.5rem;
+          position: relative;
+          margin-top: 2rem;
+          transition: all var(--trans);
+          &:hover {
+            background-color: var(--bg-clr-alt);
+            transform: scale(1.05);
+            p {
+              color: var(--theme-clr);
+            }
+            i {
+              transform: rotate(-5deg);
+              animation: up-Down 1s alternate infinite;
+            }
+          }
+          p {
+            display: initial;
+            font-family: cursive;
+            font: {
+              size: 1.3rem;
+              weight: bold;
+            }
+          }
+          i {
+            border-radius: 50%;
+            color: #fff;
+            font-size: 1.5rem;
+            position: absolute;
+            right: -2px;
+            top: 0px;
+            padding: 15px;
+            background-color: var(--theme-clr);
+            transition: transform var(-trans);
+          }
+        }
+      }
+    }
+
+    .smileys.parti {
+      position: absolute;
+      height: 5rem;
+      width: 30vw;
+      align-content: center;
+      clip-path: polygon(
+        61% 15%,
+        94% 6%,
+        100% 43%,
+        100% 99%,
+        77% 78%,
+        52% 100%,
+        15% 100%,
+        100% 20%,
+        54% 49%
+      );
+      bottom: 0;
+      right: 0;
+      z-index: 99;
+    }
+  }
+}

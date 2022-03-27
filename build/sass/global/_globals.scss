@@ -1,0 +1,52 @@
+// Globals
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --theme-clr: #fd9f2c;
+  --txt-clr: #c8cbd0;
+  --bg-clr: #191d2b;
+  --bg-clr-alt: #454e56;
+  --grad-clr: linear-gradient(
+    150deg,
+    #fd9f2c 70%,
+    #fc7164 99%,
+    #d15f8c 100%
+  );
+  --fo-family: cursive;
+  --trans: 0.3s ease-in-out;
+}
+
+body {
+  font-family: var(--fo-family);
+  background-color: var(--bg-clr);
+
+  &.light {
+    --theme-clr: #854901;
+    --txt-clr: #333;
+    --bg-clr: #fff8f0;
+    --bg-clr-alt: #f0e4d5;
+  }
+}
+
+h1,
+h2,
+p {
+  color: var(--txt-clr);
+}
+
+main > section {
+  display: none;
+}
+
+@keyframes up-Down {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-7px);
+  }
+}
