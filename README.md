@@ -34,10 +34,11 @@
 - [x] smiley faces home bg
 - [ ] 9 dots Menu on mobile
 - [ ] Hexagon hover
-- [ ] one-section on bigger devices
+- [x] one-section on bigger devices
 - [ ] loading state with animated word
 - [ ] Spinners at certificates section
 - [ ] eye follow at contact section --Contact me word
+- [ ] custom scrollbar
 
 <br>
 <br>
