@@ -5,7 +5,7 @@
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding-inline: 1rem;
+  padding: #{"min(3rem,5vw)"};
   margin-inline: auto;
   position: relative;
 }

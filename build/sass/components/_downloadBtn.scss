@@ -1,0 +1,41 @@
+button {
+  padding: 0.7rem 5rem 0.7rem 2rem;
+  background-color: transparent;
+  border-radius: 1.5rem;
+  position: relative;
+  border: 1px solid var(--theme-clr);
+  margin-top: 2rem;
+  transition: all var(--trans);
+  position: relative;
+
+  &:hover {
+    background-color: var(--bg-clr-alt);
+    transform: scale(1.05);
+    p {
+      color: var(--theme-clr);
+    }
+    i {
+      transform: rotate(-5deg);
+      animation: up-Down 1s alternate infinite;
+    }
+  }
+  p {
+    display: initial;
+    font-family: var(--fo-family);
+    font: {
+      size: 1.3rem;
+      weight: bold;
+    }
+  }
+  i {
+    border-radius: 50%;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    right: -2px;
+    top: 0px;
+    padding: 15px;
+    background-color: var(--theme-clr);
+    transition: transform var(-trans);
+  }
+}

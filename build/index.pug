@@ -16,8 +16,8 @@ html(lang="en")
 
 		//- main sections
 		main 
-			//- home
-			section(class="home active" id="home")
+			//- Home Section
+			section(class="home" id="home")
 				.smileys
 				.container.content.grid-2
 					img(class="me1 img-res img-rounded" src="assets/images/MoFay1.webp" alt="Picture of muhammedYosry" )
@@ -28,13 +28,28 @@ html(lang="en")
 						+downloadBtn
 				.smileys.parti.hidden-lg
 					+smileys(2)
-			section.about#about
-				h1 About us
+			
+			//- About Me Section
+			section.about.active#about
+				.container 
+					h2.h1.spec-head.upper-case(data-shadow="My Story") about <span>me</span>			
+			
+			
+			//- Portfolio Section
 			section.portfolio#portfolio
-				h1 Portfolio
+				.container 
+					h2.h1.spec-head.upper-case portfolio			
+			
+			
+			//- Certificates Section
 			section.certfs#certfs
-				h1 Certficates
+				.container 
+					h2.h1.spec-head.upper-case certficates			
+			
+			
+			//- Contact Me Section
 			section.contact#contact
-				h1 Contact us!
+				.container 
+					h2.h1.spec-head.upper-case contact <span>me</span>!		
 		//- scripts
 		script(src="js/app.js") 

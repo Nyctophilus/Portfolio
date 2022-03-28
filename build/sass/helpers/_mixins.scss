@@ -31,6 +31,9 @@
   }
   &.active {
     background-color: var(--theme-clr);
+    i {
+      color: var(--bg-clr);
+    }
   }
 }
 

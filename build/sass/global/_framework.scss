@@ -19,6 +19,30 @@
   }
 }
 
+.capitalize {
+  text-transform: capitalize;
+}
+
+.upper-case {
+  text-transform: uppercase;
+}
+
+// special heading
+.spec-head {
+  color: var(--txt-clr);
+  text-align: center;
+  font-size: 5rem;
+  // [ ] shadow ::before
+
+  span {
+    color: var(--theme-clr);
+    background-image: var(--grad-clr);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+// basis visiablities
 .hidden-sm {
   @include basisVisability(sm);
 }

@@ -12,9 +12,9 @@
   --bg-clr-alt: #2a2e35;
   --grad-clr: linear-gradient(
     150deg,
-    #fd9f2c 70%,
-    #fc7164 99%,
-    #d15f8c 100%
+    #fd9f2c 50%,
+    #fc7164 80%,
+    #d15f8c
   );
   --fo-family: cursive;
   --trans: 0.3s ease-in-out;
@@ -32,15 +32,27 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+}
+
 h1,
 h2,
 p {
   color: var(--txt-clr);
 }
 
-h1 {
+h1,
+h2.h1 {
+  font-size: 3rem;
   @include breakpoints(max-small) {
-    font-size: 6vw;
+    font-size: 10vw;
+  }
+}
+
+p {
+  @include breakpoints(max-small) {
+    font-size: #{"min(5vw, 1rem)"};
   }
 }
 
