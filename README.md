@@ -7,6 +7,7 @@
 - [Overview](#Overview)
 - [Features](#Features)
 - [Todo-List](#TODO)
+- [Timeline](#Timeline)
 - [Contact](#Contact)
 
 ### Overview
@@ -40,9 +41,30 @@
 - [ ] eye follow at contact section --Contact me word
 - [ ] custom scrollbar
 
+### Timeline
+
+<pre>
+1st Day: 26/3/2022
+first Dev session:      01:12 PM    ~   07:32 AM        ~ 00h 00m
+
+2nd Day: 27/3/2022
+first Dev session:      11:12 AM    ~   05:23 PM        ~ 00h 00m
+second Dev session:     08:28 PM    ~   11:35 PM        ~ 00h 00m
+
+3th Day: 28/3/2022
+first Dev session:      12:05 PM    ~   04:15 PM        ~ 00h 00m
+second Dev session:     
+
+</pre>
+
+<pre><q>Challenge Completed in   <code>00h 00m</code></q></pre>
+
 <br>
 <br>
 <br>
+
+#### Contact
+
 🤩 Leave a :star:&nbsp;if you like it, Please!
 
 <br>
