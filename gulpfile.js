@@ -40,10 +40,12 @@ gulp.task("scssTask", () => {
 
 // JavaScript Task
 gulp.task("jsTask", () => {
-  return gulp
-    .src("build/js/app.js", { sourcemaps: true })
-    .pipe(terser())
-    .pipe(gulp.dest("dist/js", { sourcemaps: "." }));
+  return (
+    gulp
+      .src("build/js/app.js", { sourcemaps: true })
+      // .pipe(terser())
+      .pipe(gulp.dest("dist/js", { sourcemaps: "." }))
+  );
 });
 
 // compress images Task
@@ -109,6 +111,7 @@ export default series(
   "scssTask",
   "jsTask",
   "browsersyncServe",
-  "imgTask",
+  //   "imgTask",
+  // 'rootImgTask',
   "watchTask"
 );
