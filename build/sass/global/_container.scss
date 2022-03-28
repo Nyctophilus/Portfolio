@@ -1,0 +1,36 @@
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  width: 100%;
+  padding-inline: var(1rem);
+  margin-inline: auto;
+  position: relative;
+}
+
+.container {
+  margin: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+
+  @include breakpoints(medium) {
+    max-width: 540px;
+  }
+  @include breakpoints(medium) {
+    max-width: 720px;
+  }
+  @include breakpoints(large) {
+    max-width: 960px;
+  }
+}
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);

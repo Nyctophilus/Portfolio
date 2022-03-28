@@ -38,3 +38,83 @@
   flex-direction: row-reverse;
   gap: 3rem;
 }
+
+@mixin amineText($text) {
+  position: relative;
+  display: block;
+  color: transparent;
+  overflow: hidden;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    overflow: hidden;
+    color: var(--theme-clr);
+    width: 0;
+    border-radius: 8px solid var(--theme-clr);
+    -webkit-text-stroke: 1px var(--theme-clr);
+    top: 0;
+    transition: width var(--trans);
+
+    animation: animteWord 5s 5s infinite alternate
+      ease-in-out;
+  }
+  &:hover::before {
+    animation: none;
+    width: 100%;
+  }
+}
+
+// Gird system >> Media Queries Mixin
+@mixin breakpoints($point) {
+  @if $point == "tinny-mobile" {
+    @media (max-width: 400px) {
+      @content;
+    }
+  } @else if $point == "mobile" {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == "min-small" {
+    @media (min-width: 577px) {
+      @content;
+    }
+  } @else if $point == "small" {
+    @media (min-width: 577px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "max-small" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == "min-medium" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point == "medium" {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == "max-medium" {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == "min-large" {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point == "large" {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == "max-large" {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == "xlarge" {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}

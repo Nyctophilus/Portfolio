@@ -5,11 +5,12 @@ body {
     .content {
       height: 100vh;
       z-index: 2;
-      position: relative;
+
       .me1 {
         align-self: center;
         max-height: 90vh;
         margin-inline: auto;
+        animation: up-Down 2s infinite alternate;
       }
 
       .text-content {
@@ -26,6 +27,9 @@ body {
           }
           small {
             font-size: 50%;
+            margin-block: 2rem;
+
+            @include amineText($text: attr(data-text));
           }
         }
         p {
@@ -37,11 +41,13 @@ body {
         button {
           padding: 0.7rem 5rem 0.7rem 2rem;
           background-color: transparent;
-          border: 1px solid var(--theme-clr);
           border-radius: 1.5rem;
           position: relative;
+          border: 1px solid var(--theme-clr);
           margin-top: 2rem;
           transition: all var(--trans);
+          position: relative;
+
           &:hover {
             background-color: var(--bg-clr-alt);
             transform: scale(1.05);
@@ -55,7 +61,7 @@ body {
           }
           p {
             display: initial;
-            font-family: cursive;
+            font-family: var(--fo-family);
             font: {
               size: 1.3rem;
               weight: bold;
@@ -73,6 +79,11 @@ body {
             transition: transform var(-trans);
           }
         }
+      }
+
+      // [ ] media query
+      @include breakpoints("max-medium") {
+        display: initial;
       }
     }
 
