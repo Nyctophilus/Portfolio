@@ -1,0 +1,35 @@
+.controls {
+  position: fixed;
+  right: 2rem;
+  top: 30%;
+  z-index: 99;
+
+  @include breakpoints(max-small) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: var(--bg-clr-alt);
+    right: unset;
+    top: unset;
+    bottom: 0;
+    padding-block: 1rem;
+  }
+
+  @include breakpoints(tinny-mobile) {
+    gap: 0.5rem;
+  }
+
+  .control {
+    @include iconCover;
+
+    @include breakpoints(max-small) {
+      box-shadow: 0 0 5px var(--bg-clr);
+    }
+
+    @include breakpoints(tinny-mobile) {
+      padding: 0.8rem;
+    }
+  }
+}

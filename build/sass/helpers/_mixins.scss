@@ -11,9 +11,16 @@
     font-size: 1.5rem;
     color: var(--txt-clr);
     cursor: pointer;
+
+    @include breakpoints(tinny-mobile) {
+      font-size: unset;
+    }
   }
   &:not(:last-of-type) {
     margin-bottom: 1rem;
+    @include breakpoints(max-small) {
+      margin-bottom: unset;
+    }
   }
   &:hover {
     background-color: var(--theme-clr);
@@ -28,7 +35,7 @@
 }
 
 @mixin specialBG {
-  background: var(--grad-clr);
+  background-image: var(--grad-clr);
   padding: 2rem;
   position: absolute;
   clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
@@ -44,9 +51,10 @@
   display: block;
   color: transparent;
   overflow: hidden;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+  -webkit-text-stroke: 1px var(--txt-clr);
 
   &::before {
+    // [ ] try clip path back ground and animte it with background-position 0 0 --> 2000px 0
     content: attr(data-text);
     position: absolute;
     overflow: hidden;
@@ -112,9 +120,41 @@
     @media (max-width: 1199px) {
       @content;
     }
-  } @else if $point == "xlarge" {
+  } @else if $point == "min-xlarge" {
     @media (min-width: 1200px) {
       @content;
+    }
+  } @else if $point == "xlarge" {
+    @media (min-width: 1200px) and (max-width: 1399px) {
+      @content;
+    }
+  } @else if $point == "max-xlarge" {
+    @media (max-width: 1399px) {
+      @content;
+    }
+  } @else if $point == "xxlarge" {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }
+}
+
+@mixin basisVisability($size) {
+  @if $size == sm {
+    @media (max-width: 767px) {
+      display: none !important;
+    }
+  } @else if $size == md {
+    @media (max-width: 991px) {
+      display: none !important;
+    }
+  } @else if $size == lg {
+    @media (max-width: 1200px) {
+      display: none !important;
+    }
+  } @else if $size == xl {
+    @media (min-width: 1200px) {
+      display: none !important;
     }
   }
 }

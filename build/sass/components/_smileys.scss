@@ -66,15 +66,15 @@ $clr2: #c35353;
 
     &:nth-child(odd) input:hover ~ .face {
       background-color: $clr1;
-      filter: drop-shadow(0 0 50px $clr1)
-        drop-shadow(0 0 100px $clr1)
-        drop-shadow(0 0 150px $clr1);
     }
     &:nth-child(even) input:hover ~ .face {
       background-color: $clr2;
-      filter: drop-shadow(0 0 50px $clr2)
-        drop-shadow(0 0 100px $clr2)
-        drop-shadow(0 0 150px $clr2);
+    }
+  }
+
+  @include breakpoints(max-large) {
+    &:nth-child(1) {
+      background-image: unset;
     }
   }
 }

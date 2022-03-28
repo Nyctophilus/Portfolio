@@ -9,7 +9,7 @@
   --theme-clr: #fd9f2c;
   --txt-clr: #c8cbd0;
   --bg-clr: #191d2b;
-  --bg-clr-alt: #454e56;
+  --bg-clr-alt: #2a2e35;
   --grad-clr: linear-gradient(
     150deg,
     #fd9f2c 70%,
@@ -36,6 +36,12 @@ h1,
 h2,
 p {
   color: var(--txt-clr);
+}
+
+h1 {
+  @include breakpoints(max-small) {
+    font-size: 6vw;
+  }
 }
 
 main > section {

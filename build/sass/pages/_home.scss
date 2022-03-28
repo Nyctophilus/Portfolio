@@ -1,25 +1,48 @@
 body {
   section.home {
-    @import "../helpers/smileys";
+    @import "../components/smileys";
 
-    .content {
+    .container.content {
       height: 100vh;
       z-index: 2;
+
+      // [ ] media query
+      @include breakpoints(max-medium) {
+        grid-template-columns: 1fr;
+      }
+
+      @include breakpoints(max-small) {
+        padding-right: 1rem;
+      }
+
+      @include breakpoints(max-large) {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding-top: 12rem;
+      }
 
       .me1 {
         align-self: center;
         max-height: 90vh;
         margin-inline: auto;
         animation: up-Down 2s infinite alternate;
+
+        @include breakpoints(max-large) {
+          order: 1;
+          padding-bottom: 8rem;
+        }
       }
 
       .text-content {
         align-self: center;
         padding-right: 10rem;
 
+        @include breakpoints(max-medium) {
+          padding-right: unset;
+        }
+
         h1 {
           font: {
-            size: 3rem;
             weight: bold;
           }
           span {
@@ -28,6 +51,9 @@ body {
           small {
             font-size: 50%;
             margin-block: 2rem;
+            @include breakpoints(max-small) {
+              font-size: 75%;
+            }
 
             @include amineText($text: attr(data-text));
           }
@@ -79,11 +105,6 @@ body {
             transition: transform var(-trans);
           }
         }
-      }
-
-      // [ ] media query
-      @include breakpoints("max-medium") {
-        display: initial;
       }
     }
 

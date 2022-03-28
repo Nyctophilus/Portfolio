@@ -14,4 +14,20 @@
 }
 .img-rounded {
   border-radius: 3rem;
+  @include breakpoints(max-small) {
+    border-radius: 1.5rem;
+  }
+}
+
+.hidden-sm {
+  @include basisVisability(sm);
+}
+.hidden-md {
+  @include basisVisability(md);
+}
+.hidden-lg {
+  @include basisVisability(lg);
+}
+.hidden-xl {
+  @include basisVisability(xl);
 }

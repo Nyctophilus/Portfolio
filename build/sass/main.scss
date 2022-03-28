@@ -1,10 +1,10 @@
-@import "global/globals";
 @import "helpers/mixins";
 @import "global/framework";
+@import "global/globals";
 @import "global/container";
 
 @import "moon-icons/style.scss";
-@import "global/_toggler";
-@import "global/_controls";
+@import "components/toggler";
+@import "components/controls";
 
 @import "pages/home";

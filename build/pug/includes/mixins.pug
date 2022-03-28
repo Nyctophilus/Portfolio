@@ -1,13 +1,13 @@
 mixin controls 
 	.controls 
-		.control(data-sect="home"): i(class="icon icon-home" )
+		.control.active(data-sect="home"): i(class="icon icon-home" )
 		.control(data-sect="about"): i(class="icon icon-user" )
 		.control(data-sect="portfolio"): i(class="icon icon-suitcase" )
 		.control(data-sect="certfs"): i(class="icon icon-document-certificate" )
 		.control(data-sect="contact"): i(class="icon icon-email" )
 
 mixin lightToggler
-	div(class="light-toggler control" id="light-toggler"): i(class="icon icon-light1")
+	div(class="light-toggler control" id="light-toggler"): i(class="icon icon-light")
 
 
 mixin downloadBtn 
