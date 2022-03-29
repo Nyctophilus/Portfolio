@@ -42,6 +42,9 @@
 - [ ] eye follow at contact section --Contact me word
 - [ ] custom scrollbar
 - [ ] localStorage to save settings
+- [ ] animate skills' bars
+- [ ] fading effect on shadow text
+- FIXME: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
 
 ### Timeline
 
@@ -56,6 +59,9 @@ second Dev session:     08:28 PM    ~   11:35 PM        ~ 00h 00m
 3th Day: 28/3/2022
 first Dev session:      12:05 PM    ~   04:15 PM        ~ 00h 00m
 second Dev session:     05:43 PM    ~   06:21 PM        ~ 00h 00m
+
+4th Day: 29/3/2022
+first Dev session:      01:10 PM    ~   06:52 PM        ~ 00h 00m
 
 </pre>
 

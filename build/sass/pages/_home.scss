@@ -60,7 +60,7 @@ body {
         }
         p {
           span {
-            color: var(--theme-clr);
+            @include textGradin(no);
           }
         }
 

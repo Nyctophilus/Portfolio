@@ -1,0 +1,57 @@
+section.about {
+  .container {
+    .content {
+      @include breakpoints(min-large) {
+        padding-inline: 10vw;
+      }
+
+      .breif {
+        display: flex;
+        gap: 10vw;
+
+        @include breakpoints(max-medium) {
+          flex-wrap: wrap;
+          gap: 3vh;
+          justify-content: center;
+        }
+
+        .txt {
+          p.banner {
+            position: absolute;
+          }
+          p:nth-of-type(2) {
+            margin-top: 5rem;
+          }
+          p:not(:first-of-type) {
+            margin-bottom: 1rem;
+            max-width: 30rem;
+
+            span {
+              @include textGradin(no);
+            }
+          }
+        }
+
+        img.me {
+          animation: up-Down 2s infinite alternate;
+          width: 25vw;
+          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
+          border-radius: 6px;
+
+          @include breakpoints(max-large) {
+            align-self: center;
+          }
+        }
+      }
+
+      hr {
+        width: 30%;
+        margin: 5rem auto;
+        opacity: 0.1;
+        color: var(--txt-clr);
+      }
+
+      @import "../components/timeline-stamps";
+    }
+  }
+}

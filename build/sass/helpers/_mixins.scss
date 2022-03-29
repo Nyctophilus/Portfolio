@@ -77,6 +77,16 @@
   }
 }
 
+@mixin textGradin($filter) {
+  color: var(--theme-clr);
+  background-image: var(--grad-clr);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @if $filter == "filter" {
+    filter: drop-shadow(0 0 2px var(--theme-clr));
+  }
+}
+
 // Gird system >> Media Queries Mixin
 @mixin breakpoints($point) {
   @if $point == "tinny-mobile" {

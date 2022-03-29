@@ -30,15 +30,66 @@
 // special heading
 .spec-head {
   color: var(--txt-clr);
+  font-size: 4rem;
+  position: relative;
   text-align: center;
-  font-size: 5rem;
-  // [ ] shadow ::before
+  margin-bottom: 10vw;
+
+  @include breakpoints(max-large) {
+    font-size: #{"max(6vw, 2rem)"};
+    margin-bottom: 20vw;
+  }
+
+  // [x] shadow ::before
+  &::before {
+    content: attr(data-shadow);
+    position: absolute;
+    z-index: -1;
+    opacity: 0.2;
+    font-size: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include breakpoints(max-large) {
+      font-size: unset;
+      top: 30%;
+    }
+  }
 
   span {
-    color: var(--theme-clr);
-    background-image: var(--grad-clr);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include textGradin(no);
+  }
+}
+
+// special banner
+p.banner {
+  background-image: var(--grad-clr);
+  width: fit-content;
+  font-size: 1.3em;
+  padding-inline: 0.5rem 20rem;
+  color: var(--bg-clr);
+  border-radius: 0.3rem;
+  margin-bottom: 2rem;
+
+  @include breakpoints(max-large) {
+    padding-inline: 0.5rem 15vw;
+  }
+
+  @include breakpoints(max-small) {
+    padding-inline: unset;
+  }
+  @include breakpoints(tinny-mobile) {
+    @include textGradin(filter);
+  }
+}
+
+// section head
+.section-head {
+  @include textGradin(no);
+  margin-bottom: 1rem;
+
+  @include breakpoints(tinny-mobile) {
+    margin-top: 10vw;
   }
 }
 
