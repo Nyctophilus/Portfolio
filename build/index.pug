@@ -3,65 +3,33 @@ include pug/includes/mixins
 doctype html
 html(lang="en")
 	head
-		include pug/includes/metas
+		include ./pug/includes/metas
 		title Muhammed Yousry | Computer Engineer
-		link(rel="stylesheet", href="css/main.css")
+		include ./pug/includes/styleLinks
+
 	body
 
 		//- Toggle the light!
-		+lightToggler
+		include pug/components/lightToggler
+
 
 		//- controls
-		+controls
+		include pug/components/controllers
 
 		//- main sections
 		main 
 			//- Home Section
-			section(class="home" id="home")
-				.smileys
-				.container.content.grid-2
-					img(class="me1 img-res img-rounded" src="assets/images/MoFay1.webp" alt="Picture of MuhammedYosry" )
-
-					.text-content
-						h1 Hola, I'm <span>Muhammed Yousry</span><br><small data-text="Front-end Web Developer">Front-end Web Developer</small>
-						p I'm Computer Engineering graduate specializing in Web Development. I fond of creating beautiful fluid eye-pleasing websites. I'm a highly self-motivated <span>Agilist</span> developer, Looking forward to be <span>MERN</span> Stack developer.
-						+downloadBtn
-				.smileys.parti.hidden-lg
-					+smileys(2)
+			include ./pug/pages/home
 			
 			//- About Me Section
-			section.about#about
-				.container 
-					h2.spec-head.upper-case(data-shadow="My Story") about <span>m</span><span>e</span>
+			include ./pug/pages/about
 
-					.content 
-						.breif
-						
-							.txt 
-								h2.h1.section-head Who I Am
-								p.banner Web developer based out of Alexandria 
-								p I graduated from Engineering college, computer major. I got <span>BEng</span> Degree with total degree: B+ 
-								p Awkwardly, I love Javascript! I keen on learning new Techs and tools. I dedicate -easily- 6h/day. You can say it's more like a hobbit to me now. Also reading self-development & tech books has become one of my lastest interests!💡	
-								p my graduation project was in AI & Machine learning specialization. GANS model to colorize grey scale videos based on Generative adversarial networks deep learning techniques.<br>we passed with 'A' degree
-							img(class="me img-res" src="assets/images/MoFay2.webp" alt="Second Picture of MuhammedYosry")
-						
-						hr
-
-						include ./pug/pages/timeline
-			
 			//- Skills Section
-			section.skills.active#skills
-				.container 
-					h2.h1.spec-head.upper-case(data-shadow="strength") sk<span>i</span>ll<span>s</span>
-
-
-					include ./pug/pages/skills
+			include ./pug/pages/skills
 
 
 			//- Portfolio Section
-			section.portfolio#portfolio
-				.container 
-					h2.h1.spec-head.upper-case portfolio			
+			include ./pug/pages/portfolio
 			
 			
 			//- Certificates Section
