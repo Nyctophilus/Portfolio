@@ -1,7 +1,9 @@
+@import "helpers/tokens";
 @import "helpers/mixins";
 @import "global/framework";
 @import "global/globals";
 @import "global/container";
+@import "./global/animation";
 
 @import "moon-icons/style.scss";
 @import "components/toggler";
@@ -9,3 +11,4 @@
 
 @import "pages/home";
 @import "pages/about";
+@import "pages/skills";

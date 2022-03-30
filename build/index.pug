@@ -4,7 +4,7 @@ doctype html
 html(lang="en")
 	head
 		include pug/includes/metas
-		title My portfolio
+		title Muhammed Yousry | Computer Engineer
 		link(rel="stylesheet", href="css/main.css")
 	body
 
@@ -30,9 +30,9 @@ html(lang="en")
 					+smileys(2)
 			
 			//- About Me Section
-			section.about.active#about
+			section.about#about
 				.container 
-					h2.spec-head.upper-case(data-shadow="My Story") about <span>me</span>
+					h2.spec-head.upper-case(data-shadow="My Story") about <span>m</span><span>e</span>
 
 					.content 
 						.breif
@@ -47,16 +47,17 @@ html(lang="en")
 						
 						hr
 
-						+timeline
-
-							
-
+						include ./pug/pages/timeline
 			
 			//- Skills Section
-			section.skills#skills
+			section.skills.active#skills
 				.container 
-					h2.h1.spec-head.upper-case &#9884;			
-			
+					h2.h1.spec-head.upper-case(data-shadow="strength") sk<span>i</span>ll<span>s</span>
+
+
+					include ./pug/pages/skills
+
+
 			//- Portfolio Section
 			section.portfolio#portfolio
 				.container 

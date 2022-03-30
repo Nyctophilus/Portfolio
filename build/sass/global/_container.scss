@@ -20,6 +20,10 @@
   @include breakpoints(large) {
     max-width: 960px;
   }
+
+  @include breakpoints(min-large) {
+    padding-inline: 10rem;
+  }
 }
 
 $container-max-widths: (

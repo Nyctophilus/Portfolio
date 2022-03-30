@@ -44,7 +44,10 @@
 - [ ] localStorage to save settings
 - [ ] animate skills' bars
 - [ ] fading effect on shadow text
-- FIXME: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
+- FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
+- [ ] hover img greyscale -> ..
+- [ ] effect trail follow mouse
+- [ ] fixed sidebar on the left .... fakely created by dom fragment
 
 ### Timeline
 
@@ -63,9 +66,12 @@ second Dev session:     05:43 PM    ~   06:21 PM        ~ 00h 00m
 4th Day: 29/3/2022
 first Dev session:      01:10 PM    ~   06:52 PM        ~ 00h 00m
 
+5th Day: 30/3/2022
+first Dev session:      12:10 AM    ~   05:02 PM        ~ 00h 00m
+
 </pre>
 
-<pre><q>Challenge Completed in   <code>00h 00m</code></q></pre>
+<pre><q>Development Completed in   <code>00h 00m</code></q></pre>
 
 <br>
 <br>

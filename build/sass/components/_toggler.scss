@@ -6,8 +6,9 @@
   position: absolute;
   top: 5%;
   z-index: 99;
-  width: 4rem;
-  height: 4rem;
+  width: 4rem !important;
+  height: 4rem !important;
+
   .icon {
     font-size: 2em;
   }

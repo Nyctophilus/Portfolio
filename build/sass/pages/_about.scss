@@ -1,10 +1,7 @@
 section.about {
   .container {
+    padding-block: $top-pad;
     .content {
-      @include breakpoints(min-large) {
-        padding-inline: 10vw;
-      }
-
       .breif {
         display: flex;
         gap: 10vw;

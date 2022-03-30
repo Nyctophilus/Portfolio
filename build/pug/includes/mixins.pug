@@ -2,6 +2,7 @@ mixin controls
 	.controls 
 		.control.active(data-sect="home"): i(class="icon icon-home" )
 		.control(data-sect="about"): i(class="icon icon-user" )
+		.control(data-sect="skills"): i(class="icon" ) &#9827;
 		.control(data-sect="portfolio"): i(class="icon icon-suitcase" )
 		.control(data-sect="certfs"): i(class="icon icon-document-certificate" )
 		.control(data-sect="contact"): i(class="icon icon-email" )
@@ -25,32 +26,7 @@ mixin smileys(n)
 		</label>
 	- }
 
-
-mixin timeline 
-	.timeline 
-		h2.h1.capitalize.section-head  my timeline
-		.timelines
-
-			//- timeline one
-			.year.y1 2017
-			.line.left.l1
-				.text 
-					h2.time-heading.capitalize went to college
-					p I went to college, where i started studying engineering major.
-					p A year after, i specialized in comupter department.
-			
-			//- timeline two
-			.year.y2 2019
-			.line.right.r1
-				.text 
-					h2.time-heading.capitalize ground training
-					p Got involved in software development life cycle, software design, deployment and maintenance processes.
-					p Also got engaged with clients, and how the company sign actual contacts. 
-
-
-			//- timeline three
-			.year.y3 2021
-			.line.left.l2
-				.text 
-					h2.time-heading.capitalize Graduation 
-					p Graduated from the college with B+ overall degree.
+mixin spanify(word)
+	-const arrWord = word.split("");
+		for w in arrWord
+			<span>#{w}</span>

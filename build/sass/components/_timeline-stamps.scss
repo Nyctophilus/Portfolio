@@ -1,9 +1,4 @@
 .timeline {
-  h2.h1 {
-    text-align: center;
-    font-size: 2em;
-  }
-
   .timelines {
     display: grid;
     grid-template: repeat(6, 1fr) / 1fr 5rem 1fr;
@@ -21,24 +16,20 @@
       width: 2px;
       background-color: var(--theme-clr);
       left: 50%;
-      top: 75px;
+      top: 80px;
       transform: translateX(-50%);
       animation: height 4s alternate forwards ease-out
         paused;
 
-      @include breakpoints(tinny-mobile) {
-        top: 55vw;
+      @include breakpoints(max-medium) {
+        top: 102px;
       }
       @include breakpoints(mobile) {
         left: 40px;
-        top: 30vw;
       }
-    }
 
-    // invoke centeral line animate
-    &.reach {
-      &::before {
-        animation-play-state: running;
+      @include breakpoints(tinny-mobile) {
+        top: 180px;
       }
     }
 
@@ -53,6 +44,8 @@
       position: relative;
 
       visibility: hidden;
+      animation: visiability 4s alternate forwards ease-out
+        paused;
 
       &.y1 {
         grid-area: 1/2 / span 1;
@@ -64,6 +57,7 @@
 
       &.y2 {
         grid-area: 3/2 / span 1;
+        animation-delay: 1.2s;
 
         @include breakpoints(mobile) {
           grid-area: 3/1 / span 1;
@@ -72,23 +66,11 @@
 
       &.y3 {
         grid-area: 5/2 / span 1;
+        animation-delay: 2.8s;
 
         @include breakpoints(mobile) {
           grid-area: 5/1 / span 1;
         }
-      }
-    }
-
-    // invoke fading side text animates
-    &.reach {
-      .y1 {
-        animation: visiability 1s alternate forwards;
-      }
-      .y2 {
-        animation: visiability 1s 1.1s alternate forwards;
-      }
-      .y3 {
-        animation: visiability 1s 2.5s alternate forwards;
       }
     }
 
@@ -99,9 +81,9 @@
       border-radius: 0.5rem;
       transition: top var(--trans);
       position: relative;
-
+      animation: fade 4s 4s alternate forwards ease-out
+        paused;
       opacity: 0;
-      animation: fade 4s alternate forwards ease-out;
 
       &:hover {
         top: -0.1rem;
@@ -136,24 +118,28 @@
       }
       &.l1 {
         grid-area: 2/1 / span 1;
+        animation-delay: 0.2s;
 
         @include breakpoints(mobile) {
           grid-area: 2/2 / span 1;
         }
       }
 
-      &.l2 {
-        grid-area: 6/1 / span 1;
-
-        @include breakpoints(mobile) {
-          grid-area: 6/2 / span 1;
-        }
-      }
       &.r1 {
         grid-area: 4/3 / span 1;
+        animation-delay: 1.5s;
 
         @include breakpoints(mobile) {
           grid-area: 4/2 / span 1;
+        }
+      }
+
+      &.l2 {
+        grid-area: 6/1 / span 1;
+        animation-delay: 3.5s;
+
+        @include breakpoints(mobile) {
+          grid-area: 6/2 / span 1;
         }
       }
 
@@ -191,6 +177,18 @@
 
       &.right .text::before {
         left: -1.6rem;
+      }
+    }
+
+    &.reach {
+      // invoke centeral line animate
+      &::before {
+        animation-play-state: running;
+      }
+      // invoke fading side text animates
+      .year,
+      .line {
+        animation-play-state: running;
       }
     }
   }

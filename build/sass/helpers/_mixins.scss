@@ -1,38 +1,49 @@
 @mixin iconCover {
+  $size: 60px;
+
   background-color: var(--bg-clr-alt);
   border-radius: 50%;
-  padding: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: $size;
+  height: $size;
   transition: all var(--trans);
+
+  @include breakpoints(max-small) {
+    $size: 40px;
+
+    width: $size;
+    height: $size;
+  }
 
   .icon {
     font-size: 1.5rem;
     color: var(--txt-clr);
     cursor: pointer;
 
+    @include breakpoints(max-small) {
+      display: grid;
+      place-items: center;
+    }
+
     @include breakpoints(tinny-mobile) {
       font-size: unset;
     }
   }
+
   &:not(:last-of-type) {
     margin-bottom: 1rem;
     @include breakpoints(max-small) {
       margin-bottom: unset;
     }
   }
-  &:hover {
+  &:hover,
+  &.active {
     background-color: var(--theme-clr);
     transform: scale(1.05);
     .icon {
-      color: white;
-    }
-  }
-  &.active {
-    background-color: var(--theme-clr);
-    i {
-      color: var(--bg-clr);
+      color: #fff;
     }
   }
 }
@@ -169,5 +180,12 @@
     @media (min-width: 1200px) {
       display: none !important;
     }
+  }
+}
+
+@mixin squeezeHover {
+  display: inline-block;
+  &:hover {
+    animation: squeeze 1s both;
   }
 }
