@@ -4,6 +4,7 @@ section.about {
     .content {
       .breif {
         display: flex;
+        justify-content: center;
         gap: 10vw;
 
         @include breakpoints(max-medium) {
