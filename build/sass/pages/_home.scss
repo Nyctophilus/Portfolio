@@ -5,10 +5,11 @@ body {
     .container.content {
       height: 100vh;
       z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
       // [x] media query
       @include breakpoints(max-large) {
-		  display: grid;
         grid-template-columns: 1fr;
       }
 
