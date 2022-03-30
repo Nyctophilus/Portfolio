@@ -1,3 +1,21 @@
+mixin gridMaker(name, loc ,gitLink, certLink)
+	.grid-item
+		figure: img(src= `./assets/images/${loc}.webp` alt=name )
+
+		figcaption
+			h3 #{name}
+
+			if gitLink
+				.links
+					a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank"): i.icon.icon-earth
+					a(href= `https://github.com/Nyctophilus/${gitLink}`, target="_blank"): i.icon.icon-github
+
+			if certLink
+				a(href= certLink, target="_blank", rel="noopener noreferrer")  Verify &#9756;
+
+			
+			
+
 mixin smileys(n)
 	- for (let i = 0; i < n; i++){
 		<label class="smile">
@@ -10,3 +28,5 @@ mixin spanify(word)
 	-const arrWord = word.split("");
 		for w in arrWord
 			<span>#{w}</span>
+
+

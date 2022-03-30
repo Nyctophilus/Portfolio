@@ -18,7 +18,7 @@ import webp from "gulp-webp";
 gulp.task("pugTask", () => {
   return gulp
     .src("build/index.pug")
-    .pipe(pug({ pretty: true }))
+    .pipe(pug({ pretty: false }))
     .pipe(gulp.dest("dist"));
 });
 
@@ -40,12 +40,10 @@ gulp.task("scssTask", () => {
 
 // JavaScript Task
 gulp.task("jsTask", () => {
-  return (
-    gulp
-      .src("build/js/app.js", { sourcemaps: true })
-      // .pipe(terser())
-      .pipe(gulp.dest("dist/js", { sourcemaps: "." }))
-  );
+  return gulp
+    .src("build/js/app.js", { sourcemaps: true })
+    .pipe(terser())
+    .pipe(gulp.dest("dist/js", { sourcemaps: "." }));
 });
 
 // compress images Task

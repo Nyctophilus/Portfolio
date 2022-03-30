@@ -1,0 +1,115 @@
+section.contact {
+  .container {
+    padding-block: $top-pad;
+
+    .text-area {
+      h2.spec-head {
+        text-align: unset;
+        margin-bottom: 2rem;
+      }
+
+      .contact-form {
+        margin-top: 2rem;
+        form {
+          ul {
+            display: grid;
+            grid-template: 1fr 1fr 6rem / 1fr 1fr;
+            gap: 0.5rem;
+
+            li {
+              input,
+              textarea {
+                background-color: var(--bg-clr-alt);
+                height: 100%;
+                width: 100%;
+                padding: 0.5rem 1rem;
+                border-radius: 5px;
+                border: none;
+                resize: none;
+              }
+
+              &.subject,
+              &.msg,
+              &.submit {
+                grid-column-end: span 2;
+              }
+
+              .flat-button {
+                position: relative;
+                display: block;
+                width: fit-content;
+                padding: 0.5rem 2rem;
+                margin-left: auto;
+                border-radius: 5px;
+                border: 1px solid var(--theme-clr);
+                overflow: hidden;
+
+                .text {
+                  color: var(--theme-clr);
+                  z-index: 1;
+                  position: relative;
+                  transition: color var(--trans);
+                }
+
+                .bg {
+                  position: absolute;
+                  width: 0%;
+                  height: 100%;
+                  top: 0;
+                  left: -4%;
+                  background-color: var(--theme-clr);
+                  transition: width var(--trans);
+                }
+
+                &:hover {
+                  .text {
+                    color: var(--bg-clr);
+                  }
+
+                  .bg {
+                    width: 110%;
+                    transform: skewX(-20deg);
+                  }
+                }
+              }
+
+              #submit {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // [ ] view on larger screens
+    .contact-info {
+      margin-top: 5rem;
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+
+        &:not(:first-of-type) {
+          margin-top: 1.5rem;
+        }
+
+        .head {
+          display: flex;
+
+          i {
+            color: var(--theme-clr);
+            margin-right: 0.5rem;
+            position: relative;
+            top: 4px;
+          }
+          p {
+          }
+        }
+        p {
+        }
+      }
+    }
+  }
+}

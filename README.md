@@ -49,6 +49,7 @@
 - [ ] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
 - [ ] timely disappear controllers on idle state
+- [ ] click on img popup a viewer screen with x btn
 
 ### Timeline
 
@@ -69,7 +70,8 @@ first Dev session:      01:10 PM    ~   06:52 PM        ~ 00h 00m
 
 5th Day: 30/3/2022
 first Dev session:      12:10 AM    ~   05:02 AM        ~ 00h 00m
-first Dev session:      03:11 PM    ~   06:45 PM        ~ 00h 00m
+second Dev session:     03:11 PM    ~   06:45 PM        ~ 00h 00m
+third Dev session:      06:37 PM    ~   12:15 AM        ~ 00h 00m
 
 </pre>
 

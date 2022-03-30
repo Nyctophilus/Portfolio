@@ -23,8 +23,7 @@
     cursor: pointer;
 
     @include breakpoints(max-small) {
-      display: grid;
-      place-items: center;
+	  place-self: center ;
     }
 
     @include breakpoints(tinny-mobile) {
@@ -40,7 +39,7 @@
   }
   &:hover,
   &.active {
-    background-color: var(--theme-clr);
+    background-color: var(--lighty-clr);
     transform: scale(1.05);
     .icon {
       color: #fff;
@@ -185,6 +184,8 @@
 
 @mixin squeezeHover {
   display: inline-block;
+  min-width: 1rem;
+
   &:hover {
     animation: squeeze 1s both;
   }

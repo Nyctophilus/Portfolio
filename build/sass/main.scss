@@ -3,9 +3,10 @@
 @import "global/framework";
 @import "global/globals";
 @import "global/container";
-@import "./global/animation";
+@import "global/animation";
 
 @import "moon-icons/style.scss";
+@import "components/grid-web";
 @import "components/toggler";
 @import "components/controls";
 
@@ -13,3 +14,5 @@
 @import "pages/about";
 @import "pages/skills";
 @import "pages/portfolio";
+@import "pages/certificates";
+@import "pages/contact";

@@ -5,57 +5,10 @@ section.portfolio {
     h2 {
       margin-bottom: 6rem;
     }
-    .portfolio-items {
-      display: grid;
-      grid-template-columns: repeat(
-        auto-fit,
-        minmax(20rem, 4fr)
-      );
 
-      .port-item {
-        position: relative;
-        overflow: hidden;
+    .grid-web {
+      .grid-item {
         height: 20vh;
-
-        // &:not(:first-of-type) {
-        //   top: -5px;
-        // }
-
-        figure {
-          height: inherit;
-
-          img {
-            height: inherit;
-          }
-        }
-        figcaption {
-          background-color: var(--bg-clr-alt);
-          padding: 0.5rem 2rem;
-          position: absolute;
-          width: 100%;
-          bottom: 0;
-
-          transform: translateY(100%);
-          transition: transform var(--trans);
-
-          h3 {
-            color: var(--txt-clr);
-            text-align: center;
-            margin-bottom: 0.5rem;
-          }
-          .links {
-            color: var(--theme-clr);
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            a {
-            }
-          }
-        }
-
-        &:hover figcaption {
-          transform: translateY(0);
-        }
       }
     }
   }

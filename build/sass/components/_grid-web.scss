@@ -1,0 +1,53 @@
+.grid-web {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(20rem, 4fr)
+  );
+
+  .grid-item {
+    position: relative;
+    overflow: hidden;
+
+    figure {
+      height: inherit;
+
+      img {
+        height: inherit;
+        transition: transform var(--trans);
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+    figcaption {
+      background-color: var(--bg-clr-alt);
+      padding: 0.5rem 2rem;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+
+      transform: translateY(100%);
+      transition: transform var(--trans);
+
+      h3 {
+        color: var(--txt-clr);
+        text-align: center;
+        margin-bottom: 0.5rem;
+      }
+      .links {
+        color: var(--theme-clr);
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    &:hover figcaption {
+      transform: translateY(0);
+    }
+
+    &:hover img {
+      transform: scale(1.05) rotate(-0.5deg);
+    }
+  }
+}

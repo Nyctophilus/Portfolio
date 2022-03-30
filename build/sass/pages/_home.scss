@@ -6,8 +6,9 @@ body {
       height: 100vh;
       z-index: 2;
 
-      // [ ] media query
-      @include breakpoints(max-medium) {
+      // [x] media query
+      @include breakpoints(max-large) {
+		  display: grid;
         grid-template-columns: 1fr;
       }
 

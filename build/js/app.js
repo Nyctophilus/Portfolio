@@ -86,6 +86,9 @@ selectorG(".controls .control").forEach((controller) => {
   controller.addEventListener("click", () => {
     toggleActiveControllers(controller);
 
+    // start every section from top
+    window.scrollTo(0, 0);
+
     toggleActiveSections(controller);
   });
 });

@@ -1,0 +1,67 @@
+section.contact#contact
+	.container 
+		.contact.grid-2
+			.text-area
+				h2.h1.spec-head.upper-case(data-shadow="now"): +spanify('contact me')
+				p I'm interested in freelance and job offers - especially ambitious and positive environment. However, if you have other feedback, don't hesitate to use the form.
+
+				.contact-form
+					form(id="contact-form" autocomplete="off")
+						ul
+							li.name
+								input(placeholder="Name" type="text" name="name")
+
+
+							li.mail
+								input(placeholder="Email" type="email" name="email")
+
+
+							li.subject
+								input(placeholder="Subject" type="text" name="subject")
+
+
+							li.msg
+								textarea(placeholder="Message" name="msg")
+
+							li.submit
+								input(type="hidden" name="submit" value="")
+								a(href="" id="submit-form" class="flat-button")
+
+										span.bg
+										span.text Send message!
+
+								//- for functional submitting form
+								input#submit
+
+		.contact-info 
+			.info 	
+				.head 
+					i.icon.icon-location 
+					p.capitalize location: 
+				p Alexandria, Egypt 
+
+				
+			.info 	
+				.head 
+					i.icon.icon-email 
+					p.capitalize email: 
+				p mohammed.yuossry@gmail.com
+
+			.info 	
+				.head 
+					i.icon.icon-education 
+					p.capitalize education: 
+				p Pharos University, Alexandria
+
+			.info 	
+				.head 
+					i.icon.icon-phone 
+					p.capitalize Mobile Number: 
+				p +201125595287
+
+			.info 	
+				.head 
+					i.icon.icon-earth 
+					p.capitalize languages: 
+				p Arabic, English
+
