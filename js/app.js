@@ -92,8 +92,21 @@ selectorG(".controls .control").forEach((controller) => {
 
 // on scroll to timeline viewport..
 window.addEventListener("scroll", () => {
-  const timeline = selectorUni(".timelines");
-  if (window.scrollY > timeline.offsetHeight - 100)
-    timeline.classList.add("reach");
+  // coz scrollY calculates from the acutal screenView,
+  // but offsetHeight calculates even from the hidden sections
+
+  //   when timeline section has height ==> active
+  if (
+    window.scrollY > 700 &&
+    selectorUni(".timelines").clientHeight
+  )
+    selectorUni(".timelines").classList.add("reach");
+
+  //   when myskills section has height ==> active
+  if (
+    window.scrollY > 100 &&
+    selectorUni(".my-skills").clientHeight
+  )
+    selectorUni(".my-skills").classList.add("reach");
 });
 //# sourceMappingURL=app.js.map
