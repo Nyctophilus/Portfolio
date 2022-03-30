@@ -48,6 +48,7 @@
 - [ ] hover img greyscale -> ..
 - [ ] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
+- [ ] timely disappear controllers on idle state
 
 ### Timeline
 
@@ -67,8 +68,8 @@ second Dev session:     05:43 PM    ~   06:21 PM        ~ 00h 00m
 first Dev session:      01:10 PM    ~   06:52 PM        ~ 00h 00m
 
 5th Day: 30/3/2022
-first Dev session:      12:10 AM    ~   05:02 PM        ~ 00h 00m
-first Dev session:      03:11 PM    ~   05:02 PM        ~ 00h 00m
+first Dev session:      12:10 AM    ~   05:02 AM        ~ 00h 00m
+first Dev session:      03:11 PM    ~   06:45 PM        ~ 00h 00m
 
 </pre>
 

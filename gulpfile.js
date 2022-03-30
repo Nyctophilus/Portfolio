@@ -51,7 +51,7 @@ gulp.task("jsTask", () => {
 // compress images Task
 gulp.task("imgTask", () => {
   return gulp
-    .src("build/assets/images/*.*")
+    .src("build/assets/images/**/*.*")
     .pipe(imagemin())
     .pipe(webp())
     .pipe(gulp.dest("dist/assets/images"));
@@ -59,10 +59,10 @@ gulp.task("imgTask", () => {
 
 gulp.task("rootImgTask", () => {
   return gulp
-    .src("build/preview.png")
+    .src("build/assets/preview.png")
     .pipe(imagemin())
     .pipe(webp())
-    .pipe(gulp.dest("dist/"));
+    .pipe(gulp.dest("./"));
 });
 
 // Browsersync Tasks
@@ -102,8 +102,8 @@ gulp.task("watchTask", () => {
   );
 
   // watch Images
-  watch("build/assets/images/**/*.*", series("imgTask"));
-  watch("build/assets/preview.png", series("rootImgTask"));
+  //   watch("build/assets/images/**/*.*", series("imgTask"));
+  //   watch("build/assets/preview.png", series("rootImgTask"));
 });
 
 export default series(
@@ -112,6 +112,6 @@ export default series(
   "jsTask",
   "browsersyncServe",
   //   "imgTask",
-  // 'rootImgTask',
+  //   "rootImgTask",
   "watchTask"
 );

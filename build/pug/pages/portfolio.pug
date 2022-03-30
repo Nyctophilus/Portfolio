@@ -1,4 +1,46 @@
+mixin portItemMaker(name, gitLink)
+	.port-item
+		figure: img.img-res(src= `./assets/images/portfolio/${name}.webp` alt=name )
+
+		figcaption
+			h3 #{name}
+			.links
+				a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank"): i.icon.icon-earth
+				a(href= `https://github.com/Nyctophilus/${gitLink}`, target="_blank"): i.icon.icon-github
+
+
 section.portfolio.active#portfolio
 	.container 
 		h2.h1.spec-head.upper-case(data-shadow="my work") port<span>f</span>oli<span>o</span>
 		
+
+		.portfolio-items
+			
+			+portItemMaker('Portfolio', 'Portfolio')
+
+			+portItemMaker('Metis', 'Metis')
+			
+			+portItemMaker('FoodCrush', 'Foodie-Crush')
+			
+			+portItemMaker('Composition', 'Sass-Practical')
+			
+			+portItemMaker('Aero', 'Aero---Car-Accessories-Website')
+			
+			+portItemMaker('EliteCrop', 'Bootstrap_DesignThree/')
+			
+			+portItemMaker('AXIT', 'Bootstrap_DesignTwo/')
+			
+			+portItemMaker('Fayy', 'Bootstrap_DesginOne' )
+			
+			+portItemMaker('Cola' , 'Cocacola-Template')
+			
+			+portItemMaker('Leno', 'Special-Template')
+			
+			+portItemMaker('Modernist', 'Modernist-Template')
+			
+			+portItemMaker('Nyctophilus', 'Template-Three')
+			
+			+portItemMaker('Kasper', 'Template-Two')
+			
+			+portItemMaker('Leon', 'Template-one')
+
