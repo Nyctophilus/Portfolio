@@ -32,8 +32,7 @@ section.about {
         img.me {
           animation: up-Down 2s infinite alternate;
           width: 25vw;
-          box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.5);
-          border-radius: 6px;
+          object-fit: contain;
 
           @include breakpoints(max-large) {
             align-self: center;
