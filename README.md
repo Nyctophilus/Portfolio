@@ -40,42 +40,42 @@
 - [ ] loading state with animated word
 - [ ] Spinners at certificates section
 - [ ] eye follow at contact section --Contact me word
-- [ ] custom scrollbar
+- [x] custom scrollbar
 - [ ] localStorage to save settings
-- [ ] animate skills' bars
+- [x] animate skills' bars
 - [ ] fading effect on shadow text
 - FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
-- [ ] hover img greyscale -> ..
+- [x] hover img greyscale -> ..
 - [ ] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
-- [ ] timely disappear controllers on idle state
+- [x] timely disappear controllers on idle state
 - [ ] click on img popup a viewer screen with x btn
+- [ ] run lighthouse tests on the website
 
 ### Timeline
 
 <pre>
 1st Day: 26/3/2022
-first Dev session:      01:12 PM    ~   07:32 AM        ~ 00h 00m
+first Dev session:      01:12 PM    ~   07:32 PM        ~ 06h 20m
 
 2nd Day: 27/3/2022
-first Dev session:      11:12 AM    ~   05:23 PM        ~ 00h 00m
-second Dev session:     08:28 PM    ~   11:35 PM        ~ 00h 00m
+first Dev session:      11:12 AM    ~   05:23 PM        ~ 06h 11m
+second Dev session:     08:28 PM    ~   11:35 PM        ~ 03h 07m
 
 3th Day: 28/3/2022
-first Dev session:      12:05 PM    ~   04:15 PM        ~ 00h 00m
-second Dev session:     05:43 PM    ~   06:21 PM        ~ 00h 00m
+first Dev session:      12:05 PM    ~   04:15 PM        ~ 05h 38m
+second Dev session:     05:43 PM    ~   06:21 PM        ~ 00h 38m
 
 4th Day: 29/3/2022
-first Dev session:      01:10 PM    ~   06:52 PM        ~ 00h 00m
+first Dev session:      01:10 PM    ~   06:52 PM        ~ 05h 42m
 
 5th Day: 30/3/2022
-first Dev session:      12:10 AM    ~   05:02 AM        ~ 00h 00m
-second Dev session:     03:11 PM    ~   06:45 PM        ~ 00h 00m
-third Dev session:      06:37 PM    ~   12:15 AM        ~ 00h 00m
-
+first Dev session:      12:10 AM    ~   05:02 AM        ~ 04h 52m
+second Dev session:     03:11 PM    ~   06:45 PM        ~ 03h 34m
+third Dev session:      06:37 PM    ~   12:15 AM        ~ 05h 38m
 </pre>
 
-<pre><q>Development Completed in   <code>00h 00m</code></q></pre>
+<pre><q>Development Completed in   <code>41h 40m</code></q></pre>
 
 <br>
 <br>

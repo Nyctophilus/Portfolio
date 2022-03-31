@@ -100,8 +100,8 @@ gulp.task("watchTask", () => {
   );
 
   // watch Images
-  //   watch("build/assets/images/**/*.*", series("imgTask"));
-  //   watch("build/assets/preview.png", series("rootImgTask"));
+  watch("build/assets/images/**/*.*", series("imgTask"));
+  watch("build/assets/preview.png", series("rootImgTask"));
 });
 
 export default series(
@@ -109,7 +109,7 @@ export default series(
   "scssTask",
   "jsTask",
   "browsersyncServe",
-  //   "imgTask",
-  //   "rootImgTask",
+  "imgTask",
+  "rootImgTask",
   "watchTask"
 );
