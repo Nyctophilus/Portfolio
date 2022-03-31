@@ -22,6 +22,18 @@
   --trans: 0.3s ease-in-out;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-clr-alt);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--theme-clr);
+  border-radius: 20px;
+  border: 2px solid var(--bg-clr-alt);
+}
+
 body {
   font-family: var(--fo-family);
   background-color: var(--bg-clr);

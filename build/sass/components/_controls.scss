@@ -3,6 +3,7 @@
   right: 2rem;
   top: 30%;
   z-index: 99;
+  transition: opacity var(--trans);
 
   @include breakpoints(max-small) {
     width: 100%;
@@ -16,8 +17,15 @@
     padding: 1rem;
   }
 
-  // [ ] hamburger menu icon on tinny width
+  &.idle {
+    opacity: 0;
+  }
 
+  &.del {
+    display: none;
+  }
+
+  // [ ] hamburger menu icon on tinny width
   .control {
     @include iconCover;
 

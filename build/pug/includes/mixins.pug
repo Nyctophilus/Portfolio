@@ -1,6 +1,6 @@
 mixin gridMaker(name, loc ,gitLink, certLink)
 	.grid-item
-		figure: img(src= `./assets/images/${loc}.webp` alt=name )
+		figure: img(src= `./assets/images/${loc}.webp` alt=name loading="lazy")
 
 		figcaption
 			h3 #{name}
