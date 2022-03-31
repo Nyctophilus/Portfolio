@@ -29,6 +29,8 @@ const selectorG = (list) => {
 const controllers = selectorG(".controls .control"),
   lightToggler = selectorId("light-toggler");
 
+let isScrolling, del;
+
 /*	
 	==================
 	==main functions==
@@ -89,19 +91,20 @@ const checkSectionReach = (sel) => {
 
 const idleState = () => {
   const conContainer = selectorUni(".controls");
-  let isScrolling, del;
 
   // conClone = selectorUni(".controls").cloneNode(true)..if (!conContainer) lightToggler.after(conClone);
 
+  conContainer.classList.remove("del"),
+    conContainer.classList.remove("idle"),
+    clearTimeout(del),
+    clearTimeout(isScrolling);
+
   //   idle state
-  conContainer.classList.remove("idle");
-  clearTimeout(isScrolling);
   isScrolling = setTimeout(() => {
     conContainer.classList.add("idle");
   }, 6000);
 
   // to delete from the dom
-  conContainer.classList.remove("del");
   del = setTimeout(() => {
     conContainer.classList.add("del");
   }, 6500);
