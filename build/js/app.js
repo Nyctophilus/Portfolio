@@ -1,16 +1,10 @@
 /*	
-	=============
-	==Cash Selectors==
-	=============
-*/
-
-/*	
 	====================
 	==helper functions==
 	====================
 */
 
-const lightToggle = () => {
+const lightToggleFunc = () => {
   document.body.classList.toggle("light");
 };
 
@@ -27,6 +21,15 @@ const selectorG = (list) => {
 };
 
 /*	
+	=============
+	==Cash Selectors==
+	=============
+*/
+
+const controllers = selectorG(".controls .control"),
+  lightToggler = selectorId("light-toggler");
+
+/*	
 	==================
 	==main functions==
 	==================
@@ -35,7 +38,7 @@ const selectorG = (list) => {
 // active controllers classes toggling
 const toggleActiveControllers = (con) => {
   // remove active class from all controllers
-  selectorG(".controls .control").forEach((con) => {
+  controllers.forEach((con) => {
     con.classList.remove("active");
   });
 
@@ -64,6 +67,46 @@ const toggleBulbIcon = () => {
     icon.classList.toggle("icon-light1");
   }
 };
+
+const checkSectionReach = (sel) => {
+  let offset;
+
+  if (sel === ".timelines") offset = 700;
+
+  if (sel === ".my-skills") offset = 100;
+
+  /* coz of scrollY calculates from the acutal screenView,
+   	 but offsetHeight calculates even from the hidden sections
+     clientHeight --> to check if the section has height 
+	*/
+
+  if (
+    window.scrollY > offset &&
+    selectorUni(sel).clientHeight
+  )
+    selectorUni(sel).classList.add("reach");
+};
+
+const idleState = () => {
+  const conContainer = selectorUni(".controls");
+  let isScrolling, del;
+
+  // conClone = selectorUni(".controls").cloneNode(true)..if (!conContainer) lightToggler.after(conClone);
+
+  //   idle state
+  conContainer.classList.remove("idle");
+  clearTimeout(isScrolling);
+  isScrolling = setTimeout(() => {
+    conContainer.classList.add("idle");
+  }, 6000);
+
+  // to delete from the dom
+  conContainer.classList.remove("del");
+  del = setTimeout(() => {
+    conContainer.classList.add("del");
+  }, 6500);
+};
+
 /*	
 	==========
 	==Events==
@@ -71,18 +114,15 @@ const toggleBulbIcon = () => {
 */
 
 // execute light toggling!
-selectorId("light-toggler").addEventListener(
-  "click",
-  (e) => {
-    //  toggle bulb icon
-    toggleBulbIcon();
+lightToggler.addEventListener("click", (e) => {
+  //  toggle bulb icon
+  toggleBulbIcon();
 
-    lightToggle();
-  }
-);
+  lightToggleFunc();
+});
 
 // controllers navigating to section
-selectorG(".controls .control").forEach((controller) => {
+controllers.forEach((controller) => {
   controller.addEventListener("click", () => {
     toggleActiveControllers(controller);
 
@@ -93,22 +133,14 @@ selectorG(".controls .control").forEach((controller) => {
   });
 });
 
-// on scroll to timeline viewport..
+// on scroll to timeline viwport..
 window.addEventListener("scroll", () => {
-  // coz scrollY calculates from the acutal screenView,
-  // but offsetHeight calculates even from the hidden sections
-
   //   when timeline section has height ==> active
-  if (
-    window.scrollY > 700 &&
-    selectorUni(".timelines").clientHeight
-  )
-    selectorUni(".timelines").classList.add("reach");
+  checkSectionReach(".timelines");
 
   //   when myskills section has height ==> active
-  if (
-    window.scrollY > 100 &&
-    selectorUni(".my-skills").clientHeight
-  )
-    selectorUni(".my-skills").classList.add("reach");
+  checkSectionReach(".my-skills");
+
+  //   idle state
+  idleState();
 });
