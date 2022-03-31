@@ -5,24 +5,36 @@
 .container-xl,
 .container-xxl {
   width: 100%;
-  padding: #{"min(3rem,5vw)"};
-  margin-inline: auto;
+  //   responsive padding
+  padding: #{"min(10rem,20vh)"} #{"min(3rem,5vw)"};
+  margin: {
+    left: auto;
+    right: auto;
+  }
   position: relative;
 }
 
 .container {
   @include breakpoints(max-small) {
     max-width: 540px;
+    // For Edge
+    @supports (display: -ms-grid) {
+      padding: 8rem 2rem;
+    }
   }
   @include breakpoints(medium) {
     max-width: 720px;
+    // For Edge
+    @supports (display: -ms-grid) {
+      padding: 10rem 3rem;
+    }
   }
   @include breakpoints(large) {
     max-width: 960px;
-  }
-
-  @include breakpoints(min-large) {
-    padding-inline: 10rem;
+    // For Edge
+    @supports (display: -ms-grid) {
+      padding: 10rem 4rem;
+    }
   }
 }
 

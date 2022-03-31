@@ -1,9 +1,9 @@
 .grid-web {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(20rem, 4fr)
-  );
+  grid-template: {
+    columns: repeat(auto-fit, minmax(20rem, 4fr));
+    rows: auto;
+  }
 
   .grid-item {
     position: relative;

@@ -23,7 +23,7 @@
     cursor: pointer;
 
     @include breakpoints(max-small) {
-	  place-self: center ;
+      place-self: center;
     }
 
     @include breakpoints(tinny-mobile) {
@@ -67,7 +67,6 @@
   -webkit-text-stroke: 1px var(--txt-clr);
 
   &::before {
-    // [ ] try clip path back ground and animte it with background-position 0 0 --> 2000px 0
     content: attr(data-text);
     position: absolute;
     overflow: hidden;

@@ -1,11 +1,17 @@
 .timeline {
   .timelines {
     display: grid;
-    grid-template: repeat(6, 1fr) / 1fr 5rem 1fr;
+    grid-template: {
+      columns: 1fr 5rem 1fr;
+      rows: repeat(6, 1fr);
+    }
     position: relative;
 
     @include breakpoints(mobile) {
-      grid-template: repeat(6, 1fr) / 5rem 1fr;
+      grid-template: {
+        rows: repeat(6, 1fr);
+        columns: 5rem 1fr;
+      }
       gap: 0 2rem;
     }
 

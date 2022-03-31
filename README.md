@@ -51,6 +51,10 @@
 - [x] timely disappear controllers on idle state
 - [ ] click on img popup a viewer screen with x btn
 - [ ] run lighthouse tests on the website
+- [x] fix Autoplacement IE supports
+- [ ] fix sections' padding
+- [ ] clean any hover effect on large screens only
+- [ ] display ide state on home section
 
 ### Timeline
 
