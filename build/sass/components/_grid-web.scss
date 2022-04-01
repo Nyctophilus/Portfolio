@@ -54,4 +54,63 @@
       filter: grayscale(0);
     }
   }
+
+  dialog {
+    margin: auto;
+    max-width: 70%;
+    border: none;
+    border-radius: 15px;
+
+    &::backdrop {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    button {
+      position: absolute;
+      right: 12px;
+      top: -10px;
+      border: none;
+      font-size: 3em;
+      background-color: transparent;
+      color: var(--theme-clr);
+      transition: transform var(--trans);
+
+      &:hover {
+        transform: rotate(-10deg);
+      }
+      &:focus-visible {
+        outline: none;
+      }
+    }
+
+    h2 {
+      color: var(--theme-clr);
+      text-align: center;
+      margin: {
+        bottom: 0 !important;
+        top: 2rem;
+      }
+    }
+
+    p {
+      color: #333;
+      padding: 2rem;
+
+      @include breakpoints(mobile) {
+        font-size: 0.9em;
+      }
+    }
+
+    .skills-preview {
+      display: flex;
+      flex-wrap: wrap;
+      width: fit-content;
+      gap: 1rem;
+      margin: 0 auto 1rem;
+      padding: {
+        left: 2rem;
+        right: 2rem;
+      }
+    }
+  }
 }

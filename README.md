@@ -12,6 +12,8 @@
 
 ### Overview
 
+My personal portfolio. I've tried to gather all my tricks & work-arounds I learnt so far in it, so it will serve as a showcase to my skills in the present!
+
 ![Preview page](preview.webp)
 
 #### Features
@@ -41,20 +43,21 @@
 - [ ] Spinners at certificates section
 - [ ] eye follow at contact section --Contact me word
 - [x] custom scrollbar
-- [ ] localStorage to save settings
+- [ ] localStorage to save settings 'such as dark/light mode'
 - [x] animate skills' bars
 - [ ] fading effect on shadow text
-- FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
+- [x] FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
 - [x] hover img greyscale -> ..
 - [ ] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
 - [x] timely disappear controllers on idle state
-- [ ] click on img popup a viewer screen with x btn
+- [x] click on img popup a viewer screen with x btn
 - [ ] run lighthouse tests on the website
-- [x] fix Autoplacement IE supports
-- [ ] fix sections' padding
-- [ ] clean any hover effect on large screens only
-- [ ] display ide state on home section
+- [x] FIXDONE Autoplacement IE supports
+- [x] FIXDONE sections' padding
+- FIXME clean any hover effect on large screens only
+- FIXME disable idle state on home section
+- FIXME iusse font family, timeline on mobile view
 
 ### Timeline
 

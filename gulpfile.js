@@ -109,7 +109,7 @@ export default series(
   "scssTask",
   "jsTask",
   "browsersyncServe",
-  "imgTask",
-  "rootImgTask",
+  //   "imgTask",
+  //   "rootImgTask",
   "watchTask"
 );
