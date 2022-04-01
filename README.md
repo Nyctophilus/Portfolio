@@ -50,14 +50,15 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] hover img greyscale -> ..
 - [ ] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
+- [ ] form input bottom borders
 - [x] timely disappear controllers on idle state
 - [x] click on img popup a viewer screen with x btn
 - [ ] run lighthouse tests on the website
 - [x] FIXDONE Autoplacement IE supports
 - [x] FIXDONE sections' padding
-- FIXME clean any hover effect on large screens only
-- FIXME disable idle state on home section
-- FIXME iusse font family, timeline on mobile view
+- [x] FIXDONE clean any hover effect on large screens only
+- [x] FIXDONE disable idle state on home section
+- [x] FIXDONE iusse font family, timeline on mobile view
 
 ### Timeline
 
