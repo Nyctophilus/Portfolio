@@ -18,7 +18,12 @@
     #fc7164 80%,
     #d15f8c
   );
-  --fo-family: cursive;
+  --fo-family: -apple-system, BlinkMacSystemFont, cursive,
+    "Courier New", Courier, monospace;
+  @include breakpoints(mobile) {
+    --fo-family: -apple-system, BlinkMacSystemFont,
+      "Courier New", Courier, monospace, sans-serif;
+  }
   --trans: 0.3s ease-in-out;
 }
 

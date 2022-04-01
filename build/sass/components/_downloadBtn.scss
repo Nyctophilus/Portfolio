@@ -8,15 +8,17 @@ button {
   transition: all var(--trans);
   position: relative;
 
-  &:hover {
-    background-color: var(--bg-clr-alt);
-    transform: scale(1.05);
-    p {
-      color: var(--theme-clr);
-    }
-    i {
-      transform: rotate(-5deg);
-      animation: up-Down 1s alternate infinite;
+  @include breakpoints(min-small) {
+    &:hover {
+      background-color: var(--bg-clr-alt);
+      transform: scale(1.05);
+      p {
+        color: var(--theme-clr);
+      }
+      i {
+        transform: rotate(-5deg);
+        animation: up-Down 1s alternate infinite;
+      }
     }
   }
   p {
@@ -33,9 +35,9 @@ button {
     font-size: 1.5rem;
     position: absolute;
     right: -2px;
-    top: 0px;
+    top: 1px;
     padding: 15px;
     background-color: var(--theme-clr);
-    transition: transform var(-trans);
+    transition: transform var(--trans);
   }
 }

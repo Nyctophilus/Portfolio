@@ -75,14 +75,16 @@ section.contact {
                     transition: width var(--trans);
                   }
 
-                  &:hover {
-                    .text {
-                      color: var(--bg-clr);
-                    }
+                  @include breakpoints(min-small) {
+                    &:hover {
+                      .text {
+                        color: var(--bg-clr);
+                      }
 
-                    .bg {
-                      width: 110%;
-                      transform: skewX(-20deg);
+                      .bg {
+                        width: 110%;
+                        transform: skewX(-20deg);
+                      }
                     }
                   }
                 }

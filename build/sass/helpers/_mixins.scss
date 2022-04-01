@@ -80,9 +80,11 @@
     animation: animteWord 5s 5s infinite alternate
       ease-in-out;
   }
-  &:hover::before {
-    animation: none;
-    width: 100%;
+  @include breakpoints(min-small) {
+    &:hover::before {
+      animation: none;
+      width: 100%;
+    }
   }
 }
 
@@ -99,7 +101,7 @@
 // Gird system >> Media Queries Mixin
 @mixin breakpoints($point) {
   @if $point == "tinny-mobile" {
-    @media (max-width: 400px) {
+    @media (max-width: 425px) {
       @content;
     }
   } @else if $point == "mobile" {
@@ -185,7 +187,9 @@
   display: inline-block;
   min-width: 1rem;
 
-  &:hover {
-    animation: squeeze 1s both;
+  @include breakpoints(min-small) {
+    &:hover {
+      animation: squeeze 1s both;
+    }
   }
 }

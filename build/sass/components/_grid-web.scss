@@ -45,13 +45,15 @@
       }
     }
 
-    &:hover figcaption {
-      transform: translateY(0);
-    }
+    @include breakpoints(min-small) {
+      &:hover figcaption {
+        transform: translateY(0);
+      }
 
-    &:hover img {
-      transform: scale(1.05) rotate(-0.5deg);
-      filter: grayscale(0);
+      &:hover img {
+        transform: scale(1.05) rotate(-0.5deg);
+        filter: grayscale(0);
+      }
     }
   }
 
@@ -75,9 +77,12 @@
       color: var(--theme-clr);
       transition: transform var(--trans);
 
-      &:hover {
-        transform: rotate(-10deg);
+      @include breakpoints(min-small) {
+        &:hover {
+          transform: rotate(-10deg);
+        }
       }
+
       &:focus-visible {
         outline: none;
       }

@@ -15,16 +15,18 @@ $clr2: #c35353;
     input[type="radio"] {
       appearance: none;
 
-      &:hover ~ .face::after {
-        border-radius: 0 0 0.7rem 0.7rem;
-        height: 0.8rem;
-        transform: translateX(-50%) translateY(0.45rem);
-        width: 1.8rem;
-      }
+      @include breakpoints(min-small) {
+        &:hover ~ .face::after {
+          border-radius: 0 0 0.7rem 0.7rem;
+          height: 0.8rem;
+          transform: translateX(-50%) translateY(0.45rem);
+          width: 1.8rem;
+        }
 
-      &:hover ~ .face::before {
-        height: 5px;
-        transform: translate(0, 5px);
+        &:hover ~ .face::before {
+          height: 5px;
+          transform: translate(0, 5px);
+        }
       }
     }
     .face {
@@ -64,11 +66,13 @@ $clr2: #c35353;
       }
     }
 
-    &:nth-child(odd) input:hover ~ .face {
-      background-color: $clr1;
-    }
-    &:nth-child(even) input:hover ~ .face {
-      background-color: $clr2;
+    @include breakpoints(min-small) {
+      &:nth-child(odd) input:hover ~ .face {
+        background-color: $clr1;
+      }
+      &:nth-child(even) input:hover ~ .face {
+        background-color: $clr2;
+      }
     }
   }
 
