@@ -298,15 +298,17 @@ const idleState = () => {
     clearTimeout(del),
     clearTimeout(isScrolling);
 
-  //   idle state
-  isScrolling = setTimeout(() => {
-    conContainer.classList.add("idle");
-  }, 6000);
+  if (!selectorId("home").getBoundingClientRect().height) {
+    //   idle state
+    isScrolling = setTimeout(() => {
+      conContainer.classList.add("idle");
+    }, 6000);
 
-  // to delete from the dom
-  del = setTimeout(() => {
-    conContainer.classList.add("del");
-  }, 6500);
+    // to delete from the dom
+    del = setTimeout(() => {
+      conContainer.classList.add("del");
+    }, 6500);
+  }
 };
 
 const createDialog = (location, name) => {
@@ -340,6 +342,7 @@ const createDialog = (location, name) => {
 
   return dialog;
 };
+
 /*	
 	=====================
 	==End main function==
