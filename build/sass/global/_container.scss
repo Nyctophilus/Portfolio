@@ -1,20 +1,16 @@
-.container,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
+.container {
   width: 100%;
   //   responsive padding
   padding: #{"min(10rem,20vh)"} #{"min(3rem,5vw)"};
+  @supports (-ms-ime-align: auto) {
+    padding: 10rem 5rem;
+  }
   margin: {
     left: auto;
     right: auto;
   }
   position: relative;
-}
 
-.container {
   @include breakpoints(max-small) {
     max-width: 540px;
     // For Edge
@@ -25,14 +21,14 @@
   @include breakpoints(medium) {
     max-width: 720px;
     // For Edge
-    @supports (display: -ms-grid) {
+    @supports (-ms-ime-align: auto) {
       padding: 10rem 3rem;
     }
   }
   @include breakpoints(large) {
     max-width: 960px;
     // For Edge
-    @supports (display: -ms-grid) {
+    @supports (-ms-ime-align: auto) {
       padding: 10rem 4rem;
     }
   }

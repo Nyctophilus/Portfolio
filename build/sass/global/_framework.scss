@@ -75,20 +75,21 @@ p.banner {
   background-image: var(--grad-clr);
   width: fit-content;
   font-size: 1.3em;
-  padding-inline: 0.5rem 20rem;
+  padding: 0 20rem 0 0.5rem;
   color: var(--bg-clr);
   border-radius: 0.3rem;
   margin-bottom: 2rem;
 
   @include breakpoints(max-large) {
-    padding-inline: 0.5rem 15vw;
+    padding: 0 15vw 0 0.5rem;
   }
 
   @include breakpoints(max-small) {
-    padding-inline: unset;
+    padding: 0 2rem 0 0.5rem;
   }
-  @include breakpoints(tinny-mobile) {
+  @include breakpoints(mobile) {
     @include textGradin(filter);
+    margin-bottom: 2rem;
   }
 }
 

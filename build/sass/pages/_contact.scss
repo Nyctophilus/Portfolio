@@ -31,6 +31,20 @@ section.contact {
               gap: 0.5rem;
 
               li {
+                position: relative;
+                &:not(:last-of-type):before {
+                  content: "";
+                  position: absolute;
+                  border-bottom: 1px solid var(--theme-clr);
+                  height: 100%;
+                  width: 0%;
+                  transition: width var(--trans);
+                }
+
+                &:hover:before {
+                  width: 100%;
+                }
+
                 input,
                 textarea {
                   background-color: var(--bg-clr-alt);

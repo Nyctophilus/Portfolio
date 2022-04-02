@@ -1,15 +1,18 @@
 section.portfolio {
-  .container {
-    padding: $top-pad 0;
+  h2 {
+    margin: {
+      top: $top-pad;
+      bottom: 6rem;
+    }
+  }
 
-    h2 {
-      margin-bottom: 6rem;
+  .grid-web {
+    .grid-item {
+      height: 20vh;
     }
 
-    .grid-web {
-      .grid-item {
-        height: 20vh;
-      }
+    margin: {
+      bottom: $top-pad;
     }
   }
 }

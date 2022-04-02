@@ -39,6 +39,10 @@
   border: 2px solid var(--bg-clr-alt);
 }
 
+::selection {
+  background-color: #85490155;
+}
+
 body {
   font-family: var(--fo-family);
   background-color: var(--bg-clr);
@@ -60,6 +64,16 @@ a {
 
 li {
   list-style: none;
+}
+
+input,
+textarea {
+  caret-color: var(--theme-clr);
+  color: var(--txt-clr);
+
+  &:focus {
+    outline: none;
+  }
 }
 
 h1,

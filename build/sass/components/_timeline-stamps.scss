@@ -7,6 +7,10 @@
     }
     position: relative;
 
+    @supports (-ms-ime-align: auto) {
+      justify-items: center;
+    }
+
     @include breakpoints(mobile) {
       grid-template: {
         rows: repeat(6, 1fr);
@@ -60,6 +64,12 @@
       visibility: hidden;
       animation: visiability 4s alternate forwards ease-out
         paused;
+
+      @supports (-ms-ime-align: auto) {
+        height: 25px;
+        width: 50px;
+        text-align: center;
+      }
 
       &.y1 {
         grid-area: 1/2 / span 1;

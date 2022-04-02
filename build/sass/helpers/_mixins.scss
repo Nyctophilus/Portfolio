@@ -57,6 +57,11 @@
   flex-wrap: wrap;
   flex-direction: row-reverse;
   gap: 3rem;
+
+  @supports (-ms-ime-align: auto) {
+    opacity: 0.7;
+    transform: skewX(-10deg);
+  }
 }
 
 @mixin amineText($text) {
