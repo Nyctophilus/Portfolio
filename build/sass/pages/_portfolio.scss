@@ -1,18 +1,23 @@
 section.portfolio {
-  h2 {
-    margin: {
-      top: $top-pad;
-      bottom: 6rem;
-    }
-  }
+  .fake-holder {
+    animation: fallingSections 1s ease-in-out paused;
+    transition: transform var(--trans);
 
-  .grid-web {
-    .grid-item {
-      height: 20vh;
+    h2 {
+      margin: {
+        top: $top-pad;
+        bottom: 6rem;
+      }
     }
 
-    margin: {
-      bottom: $top-pad;
+    .grid-web {
+      .grid-item {
+        height: 20vh;
+      }
+
+      margin: {
+        bottom: $top-pad;
+      }
     }
   }
 }

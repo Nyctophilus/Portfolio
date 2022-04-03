@@ -37,7 +37,7 @@
       @include breakpoints(max-medium) {
         top: 7rem;
       }
-      @include breakpoints(tinny-mobile) {
+      @include breakpoints(mobile) {
         left: 40px;
         top: 9rem;
       }

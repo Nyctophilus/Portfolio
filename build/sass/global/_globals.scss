@@ -47,6 +47,10 @@
   color: var(--theme-clr);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--fo-family);
   background-color: var(--bg-clr);

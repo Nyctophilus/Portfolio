@@ -1,5 +1,8 @@
 .container {
   width: 100%;
+  animation: fallingSections 1s ease-in-out paused;
+  transition: transform var(--trans);
+
   //   responsive padding
   padding: #{"min(10rem,20vh)"} #{"min(3rem,5vw)"};
   @supports (-ms-ime-align: auto) {

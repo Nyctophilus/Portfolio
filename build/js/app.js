@@ -256,7 +256,8 @@ const applySettingsFromLocStorage = () => {
 const controllers = selectorG(".controls .control"),
   lightToggler = selectorId("light-toggler"),
   gridWeb = selectorG(".grid-web");
-loader = selectorId("loading-state");
+(loader = selectorId("loading-state")),
+  (eyeBalls = document.getElementsByClassName("ball"));
 
 let isScrolling,
   del,
@@ -460,4 +461,32 @@ gridWeb.forEach((web) => {
       dialog.showModal();
     }
   });
+});
+
+document.addEventListener("mousemove", (e) => {
+  let x = `${(e.clientX * 100) / window.innerWidth}%`;
+
+  let y = `${(e.clientY * 100) / window.innerHeight}%`;
+
+  for (let ball of eyeBalls) {
+    ball.style.left = x;
+    ball.style.top = y;
+    ball.style.transform = `translate(-${x},-${y})`;
+  }
+
+  //   red eye when go on boundries
+  if (
+    (e.clientY * 100) / window.innerHeight > 95 ||
+    (e.clientY * 100) / window.innerHeight < 5 ||
+    (e.clientX * 100) / window.innerWidth > 95 ||
+    (e.clientX * 100) / window.innerWidth < 5
+  ) {
+    Array.from(eyeBalls).forEach((ball) => {
+      ball.classList.add("red");
+    });
+  } else {
+    Array.from(eyeBalls).forEach((ball) => {
+      ball.classList.remove("red");
+    });
+  }
 });

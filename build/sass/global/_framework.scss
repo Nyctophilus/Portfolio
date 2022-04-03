@@ -1,6 +1,11 @@
 // framework
 .active {
   display: initial;
+
+  .container,
+  .fake-holder {
+    animation-play-state: running !important;
+  }
 }
 
 .grid-2 {

@@ -1,3 +1,5 @@
+@import "../components/eye-follow";
+
 section.contact {
   .container {
     @include breakpoints(min-large) {
@@ -20,6 +22,7 @@ section.contact {
         h2.spec-head {
           text-align: unset;
           margin-bottom: 2rem;
+          position: relative;
         }
 
         .contact-form {

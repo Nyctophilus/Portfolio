@@ -7,6 +7,15 @@
   }
 }
 
+@keyframes fallingSections {
+  from {
+    transform: translateY(-100%) scale(0);
+  }
+  to {
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes animteWord {
   7%,
   100% {
