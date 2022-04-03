@@ -214,6 +214,37 @@ const specifySkills = (name) => {
   return container;
 };
 
+/*
+	local storage funtionality
+*/
+const saveToLocalStorage = (setting) => {
+  if (setting.lightenMode) {
+    localStorage.setItem(
+      "lightenMode",
+      setting.lightenMode
+    );
+  }
+  if (setting.activeSection)
+    localStorage.setItem(
+      "activeSection",
+      setting.activeSection
+    );
+};
+
+const applySettingsFromLocStorage = () => {
+  if (localStorage.length) {
+    const mode = localStorage.getItem("lightenMode"),
+      section = localStorage.getItem("activeSection");
+
+    console.log(mode, section);
+
+    if (mode) document.body.classList.add(mode);
+
+    if (section)
+      selectorId(section).classList.add("active");
+  } else selectorId("home").classList.add("active");
+};
+
 /*	
 	============================
 	====End helper functions====
@@ -225,8 +256,11 @@ const specifySkills = (name) => {
 const controllers = selectorG(".controls .control"),
   lightToggler = selectorId("light-toggler"),
   gridWeb = selectorG(".grid-web");
+loader = selectorId("loading-state");
 
-let isScrolling, del;
+let isScrolling,
+  del,
+  settings = {};
 
 /*	
 	========================
@@ -256,6 +290,9 @@ const toggleActiveSections = (con) => {
 
   // add active to the clicked one!
   selectorId(con.dataset.sect).classList.add("active");
+
+  //   save active section to localstorage
+  saveToLocalStorage({ activeSection: con.dataset.sect });
 };
 
 // change bulb icon on click
@@ -351,12 +388,37 @@ const createDialog = (location, name) => {
 	=====================
 */
 
+// loading state
+window.addEventListener("load", () => {
+  applySettingsFromLocStorage();
+
+  //  [x] loading functionality
+  document.body.style.cssText =
+    "height: 100vh; overflow: hidden;";
+
+  //   remove the node from the dom
+  setTimeout(() => {
+    loader.remove();
+
+    document.body.style.cssText =
+      "height: unset; overflow: unset;";
+  }, 2000);
+});
+
 // execute light toggling!
 lightToggler.addEventListener("click", (e) => {
   //  toggle bulb icon
   toggleBulbIcon();
 
+  //  toggle body class
   lightToggleFunc();
+
+  //   save lighten mode tolocalStorage
+  saveToLocalStorage({
+    lightenMode: document.body.classList.contains("light")
+      ? "light"
+      : "dark",
+  });
 });
 
 // controllers navigating to section

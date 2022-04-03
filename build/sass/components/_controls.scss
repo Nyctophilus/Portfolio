@@ -28,6 +28,7 @@
   // [ ] hamburger menu icon on tinny width
   .control {
     @include iconCover;
+    cursor: pointer;
 
     @include breakpoints(max-small) {
       box-shadow: 0 0 5px var(--bg-clr);

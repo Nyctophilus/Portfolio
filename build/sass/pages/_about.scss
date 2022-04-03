@@ -34,6 +34,12 @@ section.about {
           animation: up-Down 2s infinite alternate;
           width: 25vw;
           object-fit: contain;
+          filter: grayscale(1);
+          transition: filter var(--trans);
+
+          &:hover {
+            filter: grayscale(0);
+          }
 
           @include breakpoints(max-large) {
             align-self: center;

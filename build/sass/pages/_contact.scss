@@ -39,6 +39,7 @@ section.contact {
                   height: 100%;
                   width: 0%;
                   transition: width var(--trans);
+                  z-index: -1;
                 }
 
                 &:hover:before {
@@ -135,6 +136,10 @@ section.contact {
             position: relative;
             top: 4px;
           }
+        }
+
+        p {
+          text-align: center;
         }
       }
     }

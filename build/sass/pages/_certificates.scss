@@ -1,12 +1,19 @@
 section.cert {
-  .grid-item {
-    height: fit-content;
+  h2 {
+    margin-top: $top-pad;
+  }
+  .grid-web {
+    margin-bottom: $top-pad;
 
-    figcaption {
-      a {
-        color: var(--txt-clr);
-        display: block;
-        text-align: center;
+    .grid-item {
+      height: fit-content;
+
+      figcaption {
+        a {
+          color: var(--txt-clr);
+          display: block;
+          text-align: center;
+        }
       }
     }
   }

@@ -20,11 +20,15 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 
 <menu>
 	<li>Advanced project structure SASS/Pug/Gulp </li>
-	<li></li>
-	<li></li>
-	<li>localStorage to save settings</li>
+	<li>Components oriented project</li>
+	<li>hide controllers on idle state </li>
+	<li>preview dialog on image click</li>
 	<li>Downloaded icons separately to minify KBs... considering SVGs</li>
 	<li>Used Gulp to compress images to minify MBs for the max limit!</li>
+	<li></li>
+	<li>loading state</li>
+	<li>animated timeline stamps</li>
+	<li>localStorage to save settings</li>
 </menu>
 
 <br>
@@ -39,13 +43,13 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [ ] Hexagon hover
 - [x] one-section on bigger devices
 - [ ] falling animation on active section!
-- [ ] loading state with animated word
+- [x] loading state with animated word
 - [ ] Spinners at certificates section
 - [ ] eye follow at contact section --Contact me word
 - [x] custom scrollbar
-- [ ] localStorage to save settings 'such as dark/light mode'
+- [x] localStorage to save settings 'such as dark/light mode'
 - [x] animate skills' bars
-- [ ] fading effect on shadow text
+- [x] fading effect on shadow text
 - [x] FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
 - [x] hover img greyscale -> ..
 - [ ] effect trail follow mouse

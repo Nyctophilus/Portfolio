@@ -43,6 +43,10 @@
   background-color: #85490155;
 }
 
+::placeholder {
+  color: var(--theme-clr);
+}
+
 body {
   font-family: var(--fo-family);
   background-color: var(--bg-clr);
@@ -54,6 +58,10 @@ body {
     --bg-clr: #fff9f2;
     --bg-clr-alt: #f0e4d599;
     --dashing-clr: var(--bg-clr-alt);
+
+    .spec-head:before {
+      opacity: 0.5;
+    }
   }
 }
 

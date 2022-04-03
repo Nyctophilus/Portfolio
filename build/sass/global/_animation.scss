@@ -55,3 +55,43 @@
     transform: scale3d(1, 1, 1);
   }
 }
+
+// loading animation
+
+@keyframes loading1 {
+  from {
+    transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(35deg) rotateY(-45deg)
+      rotateZ(360deg);
+  }
+}
+
+@keyframes loading2 {
+  from {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+  }
+}
+
+@keyframes loading3 {
+  from {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+  }
+}
+
+// shadowing text
+@keyframes shadow-text {
+  0% {
+    filter: blur(0px);
+  }
+  100% {
+    filter: blur(5px);
+  }
+}

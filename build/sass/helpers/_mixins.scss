@@ -198,3 +198,15 @@
     }
   }
 }
+
+@mixin childLoadingDelays {
+  $delay: 0.2;
+
+  @for $child from 2 to 7 {
+    &:nth-child(#{$child}) {
+      animation-delay: #{$delay + "s"};
+    }
+
+    $delay: $delay + 0.2;
+  }
+}
