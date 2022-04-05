@@ -245,6 +245,34 @@ const applySettingsFromLocStorage = () => {
   } else selectorId("home").classList.add("active");
 };
 
+const checkContactHeight = () => {
+  mouseFollowTimeout = setTimeout(() => {
+    if (
+      selectorUni("section.contact").getBoundingClientRect()
+        .height
+    ) {
+      document.addEventListener(
+        "mousemove",
+        mouseFollowEvent
+      );
+    }
+  }, 2500);
+};
+
+const toggleMouseMoveEvent = (section) => {
+  if (section === "contact") {
+    document.addEventListener(
+      "mousemove",
+      mouseFollowEvent
+    );
+  } else {
+    document.removeEventListener(
+      "mousemove",
+      mouseFollowEvent
+    );
+  }
+};
+
 /*	
 	============================
 	====End helper functions====
@@ -261,7 +289,8 @@ const controllers = selectorG(".controls .control"),
 
 let isScrolling,
   del,
-  settings = {};
+  settings = {},
+  mouseFollowTimeout;
 
 /*	
 	========================
@@ -289,11 +318,16 @@ const toggleActiveSections = (con) => {
     section.classList.remove("active");
   });
 
+  const section = con.dataset.sect;
+
   // add active to the clicked one!
-  selectorId(con.dataset.sect).classList.add("active");
+  selectorId(section).classList.add("active");
+
+  //   toggle mousemove event
+  toggleMouseMoveEvent(section);
 
   //   save active section to localstorage
-  saveToLocalStorage({ activeSection: con.dataset.sect });
+  saveToLocalStorage({ activeSection: section });
 };
 
 // change bulb icon on click
@@ -381,6 +415,64 @@ const createDialog = (location, name) => {
   return dialog;
 };
 
+// [x] only at contact section
+const mouseFollowEvent = (e) => {
+  console.log(`Mouse Event is running!`);
+  let x = `${(e.clientX * 100) / window.innerWidth}%`,
+    y = `${(e.clientY * 100) / window.innerHeight}%`;
+
+  for (let ball of eyeBalls) {
+    ball.style.left = x;
+    ball.style.top = y;
+    ball.style.transform = `translate(-${x},-${y})`;
+  }
+
+  //   red eye when go on boundries
+  if (
+    (e.clientY * 100) / window.innerHeight > 95 ||
+    (e.clientY * 100) / window.innerHeight < 5 ||
+    (e.clientX * 100) / window.innerWidth > 95 ||
+    (e.clientX * 100) / window.innerWidth < 5
+  ) {
+    Array.from(eyeBalls).forEach((ball) => {
+      ball.classList.add("red");
+    });
+  } else {
+    Array.from(eyeBalls).forEach((ball) => {
+      ball.classList.remove("red");
+    });
+  }
+};
+
+const submitForm = () => {
+  const msg = selectorUni('textarea[name="msg"]').value,
+    name = selectorUni('input[name="name"]').value;
+
+  //   send email with the anchor element
+  selectorId(
+    "submit-form"
+  ).href = `mailto:mohammed.yuossry@gmail.com?subject=feedback from portfolio website&body=${msg}`;
+
+  //   invoke popup msg
+  thanksMsg(name);
+};
+
+const thanksMsg = (name) => {
+  console.log(name);
+
+  const dialog = document.createElement("dialog");
+  (dialog.open = true),
+    (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);`);
+
+  dialog.textContent = `Thank you for your concern, ${name}!`;
+
+  document.body.appendChild(dialog);
+
+  setTimeout(() => {
+    dialog.remove();
+  }, 2000);
+};
+
 /*	
 	=====================
 	==End main function==
@@ -404,6 +496,9 @@ window.addEventListener("load", () => {
     document.body.style.cssText =
       "height: unset; overflow: unset;";
   }, 2000);
+
+  //   add mouse follow trail only in contact viewport
+  checkContactHeight();
 });
 
 // execute light toggling!
@@ -463,30 +558,8 @@ gridWeb.forEach((web) => {
   });
 });
 
-document.addEventListener("mousemove", (e) => {
-  let x = `${(e.clientX * 100) / window.innerWidth}%`;
-
-  let y = `${(e.clientY * 100) / window.innerHeight}%`;
-
-  for (let ball of eyeBalls) {
-    ball.style.left = x;
-    ball.style.top = y;
-    ball.style.transform = `translate(-${x},-${y})`;
-  }
-
-  //   red eye when go on boundries
-  if (
-    (e.clientY * 100) / window.innerHeight > 95 ||
-    (e.clientY * 100) / window.innerHeight < 5 ||
-    (e.clientX * 100) / window.innerWidth > 95 ||
-    (e.clientX * 100) / window.innerWidth < 5
-  ) {
-    Array.from(eyeBalls).forEach((ball) => {
-      ball.classList.add("red");
-    });
-  } else {
-    Array.from(eyeBalls).forEach((ball) => {
-      ball.classList.remove("red");
-    });
-  }
-});
+// submit contact us form click!
+selectorId("submit-form").addEventListener(
+  "click",
+  submitForm
+);

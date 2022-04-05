@@ -65,6 +65,10 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] FIXDONE clean any hover effect on large screens only
 - [x] FIXDONE disable idle state on home section
 - [x] FIXDONE iusse font family, timeline on mobile view
+- [x] mousemove event only at contact section
+- [ ] reset css
+- [ ] clean build/js files
+- [x] Fully functional submitting form
 
 ### Timeline
 
