@@ -41,7 +41,8 @@ gulp.task("scssTask", () => {
 // JavaScript Task
 gulp.task("jsTask", () => {
   return gulp
-    .src("build/js/app.js", { sourcemaps: true })
+    .src("build/js/**/*.js", { sourcemaps: true })
+    .pipe(concat("app.js"))
     .pipe(terser())
     .pipe(gulp.dest("dist/js", { sourcemaps: "." }));
 });
