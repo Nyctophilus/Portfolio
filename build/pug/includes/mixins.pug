@@ -1,4 +1,4 @@
-mixin gridMaker(name, loc ,gitLink, certLink)
+mixin gridMaker(name, loc ,gitLink, certLink, arLink)
 	.grid-item
 		figure: img(src= `./assets/images/${loc}.webp` alt=name data-img=loc, data-name=name loading="lazy")
 
@@ -12,6 +12,9 @@ mixin gridMaker(name, loc ,gitLink, certLink)
 
 				if certLink
 					a(href= certLink, target="_blank", rel="noopener noreferrer")  Verify &#9756;
+
+				if arLink
+					a(href= arLink, target="_blank", rel="noopener noreferrer")  Ar Link &#9756;
 
 
 mixin smileys(n)
