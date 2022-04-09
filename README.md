@@ -8,6 +8,7 @@
 - [Features](#Features)
 - [Todo-List](#TODO)
 - [Timeline](#Timeline)
+- [Stats report](#Report)
 - [Contact](#Contact)
 
 ### Overview
@@ -31,6 +32,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 	<li>Coordinated Complex Animation timeline stamps</li>
 	<li>Timely preview dialogs</li>
 	<li>Validation Form</li>
+	<li>Improved preformance by 36%, accessability 23%, best practices by 12%, SEO by 24%</li>
 </menu>
 
 <br>
@@ -73,7 +75,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] add links in the grid popup preview
 - [x] dynamically creating controllers into fragment based on sections number
 - [x] validation system of the form
-- [ ] run tests for performance, accessability, SEO, best practices
+- [x] run tests for performance, accessability, SEO, best practices
 
 ### Timeline
 
@@ -99,6 +101,17 @@ third Dev session:      06:37 PM    ~   12:15 AM        ~ 05h 38m
 </pre>
 
 <pre><q>Initial Development Completed in   <code>41h 40m</code></q></pre>
+
+<br>
+<br>
+<br>
+
+#### Report
+
+<details>
+    <summary>Website Stats Report</summary>
+    <img src="./dist/assets/images/report.webp"/>
+</details>
 
 <br>
 <br>

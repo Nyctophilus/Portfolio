@@ -1,26 +1,26 @@
 mixin gridMaker(name, loc ,gitLink, certLink, arLink)
 	.grid-item
-		figure: img(src= `./assets/images/${loc}.webp` alt=name data-img=loc, data-name=name loading="lazy")
+		figure: img(src= `./assets/images/${loc}.webp` alt=name data-img=loc, data-name=name loading="lazy" width="339" height="165")
 
 		figcaption
 			h3 #{name}
 
 			.links
 				if gitLink
-					a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank"): i.icon.icon-earth
-					a(href= `https://github.com/Nyctophilus/${gitLink}`, target="_blank"): i.icon.icon-github
+					a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank" aria-label="link to live demo of the project" aria-describedby="project link"): i.icon.icon-earth
+					a(href= `https://github.com/Nyctophilus/${gitLink}`, target="_blank" aria-label="github link to the project" aria-describedby="github link"): i.icon.icon-github
 
 				if certLink
-					a(href= certLink, target="_blank", rel="noopener noreferrer")  Verify &#9756;
+					a(href= certLink, target="_blank", rel="noopener noreferrer" aria-label="verfication link to the certificate" aria-describedby="verfication link")  Verify &#9756;
 
 				if arLink
-					a(href= arLink, target="_blank", rel="noopener noreferrer")  Ar Link &#9756;
+					a(href= arLink, target="_blank", rel="noopener noreferrer" aria-label="verfication link to the arabic version of the certificate" aria-describedby="verfication link")  Ar Link &#9756;
 
 
 mixin smileys(n)
 	- for (let i = 0; i < n; i++){
 		<label class="smile">
-			<input type="radio"/>
+			<input type="radio" aria-label="smile shape eyes"/>
 			<div class="face"></div>
 		</label>
 	- }
