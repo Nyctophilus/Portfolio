@@ -60,7 +60,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] complete meta file
 - [x] FIXDONE Autoplacement IE supports
 - [x] Edge supports
-- [x] FIXDONE sections' padding in `Edge browser`
+- [x] FIXDONE sections' padding in Edge browser
 - [x] FIXDONE clean any hover effect on large screens only
 - [x] FIXDONE disable idle state on home section
 - [x] FIXDONE iusse font family, timeline on mobile view
@@ -96,7 +96,7 @@ second Dev session:     03:11 PM    ~   06:45 PM        ~ 03h 34m
 third Dev session:      06:37 PM    ~   12:15 AM        ~ 05h 38m
 </pre>
 
-<pre><q>Development Completed in   <code>41h 40m</code></q></pre>
+<pre><q>Initial Development Completed in   <code>41h 40m</code></q></pre>
 
 <br>
 <br>
