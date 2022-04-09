@@ -94,6 +94,16 @@ const populateP = (projectName) => {
       p.textContent =
         "Enrolled in this specialization for my graduation project. Got exposed to the machine learning and artificial intelligence fields. My study time for that specialization was roughly 3-4 months";
       break;
+
+    case "Learn HTML &CSS (ITI)":
+      p.textContent =
+        "A prerequisite course for MERN Stack development Track from Mahara-Tech";
+      break;
+
+    case "Professional Web Development Nano Degree (Udacity)":
+      p.textContent =
+        "Consists of JavaScript & The DOM, Web APIs and Asynchronous Applications, Agile mindset. Submitted 3 practical projects learned about server code with express and server routes.";
+      break;
   }
 
   return p;
@@ -200,7 +210,7 @@ const specifySkills = (name) => {
 	main functions
 */
 
-const createDialog = (location, name) => {
+const createDialog = (location, name, links) => {
   const dialog = document.createElement("dialog"),
     button = document.createElement("button"),
     h2 = document.createElement("h2"),
@@ -229,6 +239,8 @@ const createDialog = (location, name) => {
     dialog.appendChild(skillsContainer);
   }
 
+  dialog.appendChild(links);
+
   return dialog;
 };
 
@@ -242,10 +254,15 @@ gridWeb.forEach((web) => {
     // console.log(e.target.dataset.img);
     // console.log(e.target.dataset.name);
 
-    const loc = e.target.dataset.img,
-      name = e.target.dataset.name;
     if (e.target.dataset.img) {
-      const dialog = createDialog(loc, name);
+      const loc = e.target.dataset.img,
+        name = e.target.dataset.name,
+        cloneLinks =
+          e.target.parentElement.nextElementSibling
+            .querySelector("div.links")
+            .cloneNode(true);
+
+      const dialog = createDialog(loc, name, cloneLinks);
       web.appendChild(dialog);
 
       dialog.showModal();

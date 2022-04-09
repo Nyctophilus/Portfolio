@@ -4,13 +4,13 @@ section.cert {
     transition: transform var(--trans);
 
     h2 {
-      margin-top: $top-pad;
+      margin-top: 2rem;
     }
     .grid-web {
       margin-bottom: $top-pad;
 
       .grid-item {
-        height: fit-content;
+        height: 40vh;
 
         figcaption {
           a {

@@ -52,13 +52,12 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] fading effect on shadow text
 - [x] FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
 - [x] hover img greyscale -> ..
-- [ ] effect trail follow mouse
+- [x] effect trail follow mouse
 - [ ] fixed sidebar on the left .... fakely created by dom fragment
 - [x] form input bottom borders
 - [x] timely disappear controllers on idle state
 - [x] click on img popup a viewer screen with x btn
 - [x] complete meta file
-- [ ] run tests for performance, accessability, SEO, best practices
 - [x] FIXDONE Autoplacement IE supports
 - [x] Edge supports
 - [x] FIXDONE sections' padding in `Edge browser`
@@ -69,7 +68,10 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] reset css
 - [x] clean build/js files
 - [x] Fully functional submitting form
-- [ ] dynamically creating controllers into fragment based on sections number
+- [x] add links in the grid popup preview
+- [x] dynamically creating controllers into fragment based on sections number
+- [x] validation system of the form
+- [ ] run tests for performance, accessability, SEO, best practices
 
 ### Timeline
 

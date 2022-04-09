@@ -38,12 +38,6 @@
         text-align: center;
         margin-bottom: 0.5rem;
       }
-      .links {
-        color: var(--theme-clr);
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-      }
     }
 
     @include breakpoints(min-small) {
@@ -63,6 +57,7 @@
     max-width: 70%;
     border: none;
     border-radius: 15px;
+    padding-bottom: 1rem;
 
     &::backdrop {
       background-color: rgba(0, 0, 0, 0.4);
@@ -118,5 +113,12 @@
         right: 2rem;
       }
     }
+  }
+
+  div.links {
+    color: var(--theme-clr);
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
   }
 }

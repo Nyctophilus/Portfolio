@@ -67,41 +67,29 @@ const mouseFollowEvent = (e) => {
   }
 };
 
-const submitForm = () => {
+const ThxPopup = () => {
   const msg = selectorUni('textarea[name="msg"]').value,
     name = selectorUni('input[name="name"]').value;
 
-  //   send email with the anchor element
-  selectorId(
-    "submit-form"
-  ).href = `mailto:mohammed.yuossry@gmail.com?subject=feedback from portfolio website&body=${msg}`;
+  //  FIXME send email with the anchor element
+  //   selectorId(
+  //     "submit-form"
+  //   ).href = `mailto:mohammed.yuossry@gmail.com?subject=feedback from portfolio website&body=${msg}`;
 
   //   invoke popup msg
   thanksMsg(name);
 };
 
 const thanksMsg = (name) => {
-  console.log(name);
-
   const dialog = document.createElement("dialog");
   (dialog.open = true),
-    (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);`);
+    (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);padding: 2rem 5rem; background-color: var(--bg-clr); color: var(--txt-clr); border: none;border-radius: 20px;`);
 
-  dialog.textContent = `Thank you for your concern, ${name}!`;
+  dialog.textContent = `${name}, Thank you for your concern!`;
 
   document.body.appendChild(dialog);
 
   setTimeout(() => {
     dialog.remove();
-  }, 5000);
+  }, 3000);
 };
-
-/*
-	events
-*/
-
-// submit contact us form click!
-selectorId("submit-form").addEventListener(
-  "click",
-  submitForm
-);
