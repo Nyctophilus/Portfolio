@@ -19,16 +19,18 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 #### Features
 
 <menu>
-	<li>Advanced project structure SASS/Pug/Gulp </li>
+	<li>Advanced project structure SASS/Pug/Gulp</li>
 	<li>Components oriented project</li>
-	<li>hide controllers on idle state </li>
-	<li>preview dialog on image click</li>
-	<li>Downloaded icons separately to minify KBs... considering SVGs</li>
 	<li>Used Gulp to compress images to minify MBs for the max limit!</li>
-	<li></li>
-	<li>loading state</li>
-	<li>animated timeline stamps</li>
+	<li>Dynamically created controllers based on the main sections --performance & blogging purposes</li>
+	<li>hide controllers on idle state</li>
 	<li>localStorage to save settings</li>
+	<li>loading state</li>
+	<li>Downloaded icons separately to minify KBs... considering SVGs</li>
+	<li>Limiting scroll, mousemove events on their perspective sections --performance purposes</li>
+	<li>Coordinated Complex Animation timeline stamps</li>
+	<li>Timely preview dialogs</li>
+	<li>Validation Form</li>
 </menu>
 
 <br>
