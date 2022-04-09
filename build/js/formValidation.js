@@ -96,6 +96,8 @@ const submission = (e) => {
       correctValidation("email");
       ThxPopup();
     }
+  } else {
+    popMsg("", "Please, Enter your name and email! 😥");
   }
 
   e.preventDefault();
@@ -108,3 +110,7 @@ const submission = (e) => {
 document
   .getElementById("contact-form")
   .addEventListener("submit", submission);
+
+document
+  .getElementById("submit-form")
+  .addEventListener("click", submission);

@@ -1,23 +1,18 @@
 section.cert {
-  .fake-holder {
-    animation: fallingSections 1s ease-in-out paused;
-    transition: transform var(--trans);
+  h2 {
+    margin-top: 2rem;
+  }
+  .grid-web {
+    margin-bottom: $top-pad;
 
-    h2 {
-      margin-top: 2rem;
-    }
-    .grid-web {
-      margin-bottom: $top-pad;
+    .grid-item {
+      height: 40vh;
 
-      .grid-item {
-        height: 40vh;
-
-        figcaption {
-          a {
-            color: var(--txt-clr);
-            display: block;
-            text-align: center;
-          }
+      figcaption {
+        a {
+          color: var(--txt-clr);
+          display: block;
+          text-align: center;
         }
       }
     }

@@ -16,7 +16,7 @@ const dynConsCreation = (sections) => {
 
     if (sect.id === "skills") {
       icon.classList.add("icon"),
-        (icon.style.fontSize = `2.5em`),
+        (icon.style.fontSize = `2rem`),
         (icon.textContent = sect.dataset.icon);
     }
 

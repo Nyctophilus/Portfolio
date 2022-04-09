@@ -4,7 +4,8 @@
   transition: transform var(--trans);
 
   //   responsive padding
-  padding: #{"min(10rem,20vh)"} #{"min(3rem,5vw)"};
+  padding: $top-pad #{"min(3rem,5vw)"};
+
   @supports (-ms-ime-align: auto) {
     padding: 10rem 5rem;
   }

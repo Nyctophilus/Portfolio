@@ -77,19 +77,19 @@ const ThxPopup = () => {
   //   ).href = `mailto:mohammed.yuossry@gmail.com?subject=feedback from portfolio website&body=${msg}`;
 
   //   invoke popup msg
-  thanksMsg(name);
+  popMsg(name, ", Thank you for your concern!");
 };
 
-const thanksMsg = (name) => {
+const popMsg = (name, message) => {
   const dialog = document.createElement("dialog");
   (dialog.open = true),
     (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);padding: 2rem 5rem; background-color: var(--bg-clr); color: var(--txt-clr); border: none;border-radius: 20px;`);
 
-  dialog.textContent = `${name}, Thank you for your concern!`;
+  dialog.textContent = `${name}${message}`;
 
   document.body.appendChild(dialog);
 
   setTimeout(() => {
     dialog.remove();
-  }, 3000);
+  }, 4000);
 };

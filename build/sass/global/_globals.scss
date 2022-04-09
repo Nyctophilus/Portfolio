@@ -108,3 +108,9 @@ p {
 main > section {
   display: none;
 }
+
+.fake-holder {
+  padding-top: $top-pad;
+  animation: fallingSections 1s ease-in-out paused;
+  transition: transform var(--trans);
+}
