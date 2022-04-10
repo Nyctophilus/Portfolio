@@ -8,7 +8,7 @@
 - [Features](#Features)
 - [Todo-List](#TODO)
 - [Timeline](#Timeline)
-- [Stats report](#Report)
+- [Stats report](#Reports)
 - [Contact](#Contact)
 
 ### Overview
@@ -106,13 +106,17 @@ third Dev session:      06:37 PM    ~   12:15 AM        ~ 05h 38m
 <br>
 <br>
 
-#### Report
+#### Reports
 
 <details>
-    <summary>Website Stats Report</summary>
+    <summary>Website Stats Desktop Report</summary>
     <img src="./dist/assets/images/report.webp"/>
 </details>
 
+<details>
+    <summary>Website Stats Moblie Report</summary>
+    <img src="./dist/assets/images/mobile report.webp"/>
+</details>
 <br>
 <br>
 <br>
