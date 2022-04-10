@@ -83,7 +83,7 @@ const ThxPopup = () => {
 const popMsg = (name, message) => {
   const dialog = document.createElement("dialog");
   (dialog.open = true),
-    (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);padding: 2rem 5rem; background-color: var(--bg-clr); color: var(--txt-clr); border: none;border-radius: 20px;`);
+    (dialog.style.cssText = `position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);padding: 2rem 3rem; background-color: var(--bg-clr-alt); color: var(--txt-clr); border: none;border-radius: 20px; width: 80%;`);
 
   dialog.textContent = `${name}${message}`;
 
