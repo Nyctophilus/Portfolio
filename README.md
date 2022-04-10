@@ -4,12 +4,12 @@
 
 ### Table of Contents
 
-- [Overview](#Overview)
-- [Features](#Features)
-- [Todo-List](#TODO)
-- [Timeline](#Timeline)
-- [Stats report](#Reports)
-- [Contact](#Contact)
+- [Overview](#overview)
+- [Features](#features)
+- [Todo-List](#todo)
+- [Timeline](#timeline)
+- [Stats report](#reports)
+- [Contact](#contact)
 
 ### Overview
 
