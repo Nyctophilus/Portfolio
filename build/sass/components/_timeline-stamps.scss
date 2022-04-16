@@ -26,28 +26,12 @@
       width: 2px;
       background-color: var(--theme-clr);
       left: 50%;
-      top: 4.6rem;
       transform: translateX(-50%);
       animation: height 4s alternate forwards ease-out
         paused;
 
-      @include breakpoints(large) {
-        top: 5.5rem;
-      }
-      @include breakpoints(max-medium) {
-        top: 7rem;
-      }
       @include breakpoints(mobile) {
         left: 40px;
-        top: 9rem;
-      }
-
-      @media (max-width: 375px) {
-        top: 12rem;
-      }
-
-      @media (max-width: 325px) {
-        top: 15rem;
       }
     }
 
@@ -73,6 +57,7 @@
 
       &.y1 {
         grid-area: 1/2 / span 1;
+        animation-delay: 0.2s;
 
         @include breakpoints(mobile) {
           grid-area: 1/1 / span 1;
@@ -81,7 +66,7 @@
 
       &.y2 {
         grid-area: 3/2 / span 1;
-        animation-delay: 1.2s;
+        animation-delay: 1s;
 
         @include breakpoints(mobile) {
           grid-area: 3/1 / span 1;
@@ -90,7 +75,7 @@
 
       &.y3 {
         grid-area: 5/2 / span 1;
-        animation-delay: 2.8s;
+        animation-delay: 2.5s;
 
         @include breakpoints(mobile) {
           grid-area: 5/1 / span 1;
@@ -144,7 +129,7 @@
       }
       &.l1 {
         grid-area: 2/1 / span 1;
-        animation-delay: 0.2s;
+        animation-delay: 0.4s;
 
         @include breakpoints(mobile) {
           grid-area: 2/2 / span 1;
@@ -162,7 +147,7 @@
 
       &.l2 {
         grid-area: 6/1 / span 1;
-        animation-delay: 3.5s;
+        animation-delay: 2.8s;
 
         @include breakpoints(mobile) {
           grid-area: 6/2 / span 1;
