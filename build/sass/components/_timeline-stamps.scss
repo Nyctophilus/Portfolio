@@ -40,7 +40,7 @@
       color: var(--bg-clr);
       width: fit-content;
       height: fit-content;
-      place-self: center;
+      place-self: start center;
       border-radius: 0.3rem;
       padding: 0.1rem;
       position: relative;
@@ -57,7 +57,6 @@
 
       &.y1 {
         grid-area: 1/2 / span 1;
-        animation-delay: 0.2s;
 
         @include breakpoints(mobile) {
           grid-area: 1/1 / span 1;
@@ -66,7 +65,7 @@
 
       &.y2 {
         grid-area: 3/2 / span 1;
-        animation-delay: 1s;
+        animation-delay: 0.8s;
 
         @include breakpoints(mobile) {
           grid-area: 3/1 / span 1;
@@ -75,7 +74,7 @@
 
       &.y3 {
         grid-area: 5/2 / span 1;
-        animation-delay: 2.5s;
+        animation-delay: 2s;
 
         @include breakpoints(mobile) {
           grid-area: 5/1 / span 1;
@@ -90,7 +89,7 @@
       border-radius: 0.5rem;
       transition: top var(--trans);
       position: relative;
-      animation: fade 4s 4s alternate forwards ease-out
+      animation: fade 2s 4s alternate forwards ease-out
         paused;
       opacity: 0;
 
@@ -129,7 +128,7 @@
       }
       &.l1 {
         grid-area: 2/1 / span 1;
-        animation-delay: 0.4s;
+        animation-delay: 0.2s;
 
         @include breakpoints(mobile) {
           grid-area: 2/2 / span 1;
@@ -138,7 +137,7 @@
 
       &.r1 {
         grid-area: 4/3 / span 1;
-        animation-delay: 1.5s;
+        animation-delay: 1.2s;
 
         @include breakpoints(mobile) {
           grid-area: 4/2 / span 1;
