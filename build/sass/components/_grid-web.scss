@@ -16,7 +16,7 @@
       img {
         height: inherit;
         transition: transform var(--trans);
-        object-fit: cover;
+        // object-fit: cover;
         width: 100%;
         filter: grayscale(0.5);
         transition: filter var(--trans),
