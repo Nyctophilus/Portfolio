@@ -111,6 +111,6 @@ main > section {
 
 .fake-holder {
   padding-top: $top-pad;
-  animation: fallingSections 1s ease-in-out paused;
+  animation: fallingSections 0.8s ease-in-out paused;
   transition: transform var(--trans);
 }
