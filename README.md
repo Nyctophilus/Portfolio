@@ -76,6 +76,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] dynamically creating controllers into fragment based on sections number
 - [x] validation system of the form
 - [x] run tests for performance, accessability, SEO, best practices
+- [ ] fetch portfolio images from github links
 
 ### Timeline
 
