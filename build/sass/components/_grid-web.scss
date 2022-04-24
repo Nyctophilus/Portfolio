@@ -66,12 +66,17 @@
     button {
       position: absolute;
       right: 12px;
-      top: -10px;
+      top: 10px;
       border: none;
       font-size: 3em;
-      background-color: transparent;
-      color: var(--theme-clr);
+      background-color: var(--theme-clr);
+      color: var(--txt-clr);
       transition: transform var(--trans);
+      border-radius: 50%;
+      padding-bottom: 0.4rem;
+      height: 40px;
+      aspect-ratio: 1;
+      line-height: 0;
 
       @include breakpoints(min-small) {
         &:hover {
