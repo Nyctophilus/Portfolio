@@ -78,6 +78,9 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] run tests for performance, accessability, SEO, best practices
 - [ ] fetch portfolio images from github links
 - [x] the x button in image previewer
+- [ ] add the new skills
+- [ ] check if can remove sections node instead of hidding em
+- [ ] interplacing moving animation on portfolio
 
 ### Timeline
 
