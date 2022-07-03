@@ -7,12 +7,17 @@ section.cert {
 
     .grid-item {
       height: 40vh;
+      img {
+        height: inherit;
+      }
 
       figcaption {
         a {
           color: var(--txt-clr);
           display: block;
           text-align: center;
+          z-index: 99;
+          position: relative;
         }
       }
     }

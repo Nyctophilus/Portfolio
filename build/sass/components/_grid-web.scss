@@ -24,7 +24,6 @@
       }
     }
     figcaption {
-      background-color: var(--bg-clr-alt);
       padding: 0.5rem 2rem;
       position: absolute;
       width: 100%;
@@ -42,7 +41,7 @@
 
     @include breakpoints(min-small) {
       &:hover figcaption {
-        transform: translateY(0);
+        transform: translateY(-200%);
       }
 
       &:hover img {
@@ -63,14 +62,19 @@
       background-color: rgba(0, 0, 0, 0.4);
     }
 
+    img {
+      margin: auto;
+      display: block;
+    }
+
     button {
       position: absolute;
       right: 12px;
       top: 10px;
       border: none;
-      font-size: 3em;
+      color: white;
+      font-size: 2.5em;
       background-color: var(--theme-clr);
-      color: var(--txt-clr);
       transition: transform var(--trans);
       border-radius: 50%;
       padding-bottom: 0.4rem;

@@ -27,6 +27,11 @@
   }
 }
 
+.f-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .capitalize {
   text-transform: capitalize;
 }
@@ -122,4 +127,55 @@ p.banner {
 }
 .hidden-xl {
   @include basisVisability(xl);
+}
+
+// img hover effect
+.figHover {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 1.25em;
+    bottom: 1.25em;
+    left: 1.25em;
+    right: 1.25em;
+    opacity: 1;
+    transition: transform ease-out 250ms;
+  }
+
+  &::before {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    transform: scale(0, 1);
+  }
+
+  &::after {
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    transform: scale(1, 0);
+    z-index: -1;
+  }
+
+  &:hover::before {
+    transform: scale(1.05, 1);
+  }
+
+  &:hover::after {
+    transform: scale(1, 1.05);
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+    transition: ease-out 250ms;
+    transform: translate3d(-20px, 0, 0) scale(1.12);
+    width: calc(100% + 50px);
+  }
+
+  &:hover {
+    img {
+      opacity: 0.4;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+  }
 }
