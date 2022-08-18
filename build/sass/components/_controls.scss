@@ -9,7 +9,7 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: var(--bg-clr-alt);
     right: unset;
     top: unset;
@@ -32,6 +32,34 @@
 
     @include breakpoints(max-small) {
       box-shadow: 0 0 5px var(--bg-clr);
+    }
+
+    &.hover {
+      &::before {
+        content: attr(data-sect);
+        position: absolute;
+        left: -1rem;
+        transform: translateX(-100%);
+        color: #fff;
+        background-color: var(--lighty-clr);
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+        font: {
+          size: 0.9rem;
+          style: oblique;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        border: {
+          width: 7px;
+          style: solid;
+          color: transparent transparent transparent
+            var(--lighty-clr);
+        }
+      }
     }
   }
 }

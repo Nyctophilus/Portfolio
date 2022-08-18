@@ -41,11 +41,12 @@
 
     @include breakpoints(min-small) {
       &:hover figcaption {
-        transform: translateY(-200%);
+        transform: translateY(-100%);
       }
 
       &:hover img {
-        transform: scale(1.05) rotate(-0.5deg);
+        transform: translate3d(0, 0, 0) scale(1.05)
+          rotate(-1deg);
         filter: grayscale(0);
       }
     }

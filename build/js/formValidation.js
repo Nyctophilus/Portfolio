@@ -97,7 +97,7 @@ const submission = (e) => {
       ThxPopup();
     }
   } else {
-    popMsg("", "Please, Enter your name and email! 😥");
+    popMsg("", "Please, Enter your name and email");
   }
 
   e.preventDefault();

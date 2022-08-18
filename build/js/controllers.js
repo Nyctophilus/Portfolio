@@ -63,6 +63,17 @@ const idleState = () => {
 };
 
 /*
+	helper function
+*/
+
+const toggleHover = (c) => {
+  c.classList.add("hover");
+  c.addEventListener("mouseout", () =>
+    c.classList.remove("hover")
+  );
+};
+
+/*
 	Events
 */
 
@@ -75,6 +86,10 @@ controllers.forEach((controller) => {
     toggleActiveControllers(controller);
 
     toggleActiveSections(controller);
+  });
+
+  controller.addEventListener("mouseover", () => {
+    toggleHover(controller);
   });
 });
 

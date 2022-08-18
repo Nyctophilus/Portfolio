@@ -48,7 +48,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] one-section on bigger devices
 - [x] falling animation on active section!
 - [x] loading state with animated word
-- [ ] Spinners at certificates section
+- [-] Spinners at certificates section
 - [x] eye follow at contact section --Contact me word
 - [x] custom scrollbar
 - [x] localStorage to save settings 'such as dark/light mode'
@@ -57,7 +57,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] FIXDONE: timeline stamps on mobile view --> timeliner on left, stamps on right 1-col
 - [x] hover img greyscale -> ..
 - [x] effect trail follow mouse
-- [ ] fixed sidebar on the left .... fakely created by dom fragment
+- [-] fixed sidebar on the left .... fakely created by dom fragment
 - [x] form input bottom borders
 - [x] timely disappear controllers on idle state
 - [x] click on img popup a viewer screen with x btn
@@ -76,11 +76,14 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] dynamically creating controllers into fragment based on sections number
 - [x] validation system of the form
 - [x] run tests for performance, accessability, SEO, best practices
-- [ ] fetch portfolio images from github links
+- [-] fetch portfolio images from github links
 - [x] the x button in image previewer
-- [ ] add the new skills
-- [ ] check if can remove sections node instead of hidding em
-- [ ] interplacing moving animation on portfolio
+- [x] check if can remove sections node instead of hidding em
+- [x] interplacing moving animation on portfolio
+- [x] onScroll transformY the section from -100% to 0
+- [x] logo and header 'menu on mobile'
+- [ ] lighting points around home section links, check the earthy bgs
+- [ ] filter on the portfolio items
 
 ### Timeline
 

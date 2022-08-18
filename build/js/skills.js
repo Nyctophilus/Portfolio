@@ -33,7 +33,7 @@ const checkSectionReach = (sel) => {
 };
 
 const scrollingForBars = () => {
-  console.log(`scrolling in skills||about only`);
+  //   console.log(`scrolling in skills||about only`);
   //   when timeline section has height ==> active
   checkSectionReach(".timelines");
 

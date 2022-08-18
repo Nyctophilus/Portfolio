@@ -58,7 +58,7 @@ const saveToLocalStorage = (setting) => {
 };
 
 const applySettingsFromLocStorage = () => {
-  if (localStorage.length) {
+  if (localStorage.getItem("activeSection")) {
     const mode = localStorage.getItem("lightenMode"),
       section = localStorage.getItem("activeSection");
 
@@ -70,7 +70,7 @@ const applySettingsFromLocStorage = () => {
     // activate controller from localstorage
     selectorUni(
       `.controls .control[data-sect="${section}"]`
-    ).classList.add("active");
+    )?.classList.add("active");
 
     // activate section from localstorage
     if (section)
