@@ -83,7 +83,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] onScroll transformY the section from -100% to 0
 - [x] logo and header 'menu on mobile'
 - [ ] lighting points around home section links, check the earthy bgs
-- [ ] filter on the portfolio items
+- [x] filter on the portfolio items
 
 ### Timeline
 
