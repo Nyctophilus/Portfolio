@@ -1,13 +1,21 @@
-mixin gridMaker(name, loc ,gitLink, certLink, arLink)
-	.grid-item.figHover.f-center
-		img(src= `./assets/images/${loc}.webp` alt=name data-img=loc, data-name=name loading="lazy" width="339" height="165")
+mixin gridMaker(name, loc ,gitLink, certLink, arLink, filter, display, netlify)
+	.grid-item.figHover.f-center(data-filter= filter style= display)
+		if loc === '{}'
+			img(src= `https://raw.githubusercontent.com/Nyctophilus/${gitLink}/master/preview.png` alt=name data-img=loc, data-name=name loading="lazy" width="339" height="165")
+		else
+			img(src= `./assets/images/${loc}.webp` alt=name data-img=loc, data-name=name loading="lazy" width="339" height="165")
 
 		figcaption
 			h3 #{name}
 
 			.links
 				if gitLink
-					a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank" aria-label="link to live demo of the project" aria-describedby="project link"): i.icon.icon-earth
+					if netlify
+						a(href= netlify, target="_blank" aria-label="link to live demo of the project" aria-describedby="project link"): i.icon.icon-earth
+					else 
+						a(href= `https://nyctophilus.github.io/${gitLink}`, target="_blank" aria-label="link to live demo of the project" aria-describedby="project link"): i.icon.icon-earth
+
+
 					a(href= `https://github.com/Nyctophilus/${gitLink}`, target="_blank" aria-label="github link to the project" aria-describedby="github link"): i.icon.icon-github
 
 				if certLink

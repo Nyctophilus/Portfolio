@@ -48,6 +48,12 @@
           size: 0.9rem;
           style: oblique;
         }
+
+        @include breakpoints(max-small) {
+          top: -2rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
       }
       &::after {
         content: "";
@@ -58,6 +64,14 @@
           style: solid;
           color: transparent transparent transparent
             var(--lighty-clr);
+        }
+
+        @include breakpoints(max-small) {
+          top: -0.6rem;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-color: var(--lighty-clr) transparent
+            transparent transparent;
         }
       }
     }

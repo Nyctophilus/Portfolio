@@ -2,38 +2,63 @@ section.portfolio#portfolio(data-icon="suitcase")
 	.fake-holder
 		h2.h1.spec-head.upper-case(data-shadow="my work") port<span>f</span>oli<span>o</span>
 		
+		ul.filter
+			li(data-filter='react'): +spanify('react')
+			li(data-filter='express'): +spanify('express')
+			li(data-filter='UI'): +spanify('UI')
 
 		.grid-web
-			
-			+gridMaker('Portfolio', 'portfolio/Portfolio' ,'Portfolio')
 
-			+gridMaker('Weather App', 'portfolio/weatherApp' ,'fwd-weather-journal')
 
-			+gridMaker('Metis', 'portfolio/Metis' ,'Metis')
-			
-			+gridMaker('FoodCrush', 'portfolio/FoodCrush' ,'Foodie-Crush')
-			
-			+gridMaker('Composition', 'portfolio/Composition' ,'Sass-Practical')
 
-			+gridMaker('Blogs', 'portfolio/fwd-landingPage' ,'fwd-Landing-Page')
+			+gridMaker('My Reads', 'portfolio/MyReads-React' ,'MyReads-React',false, false, 'react', false , 'https://fayad-myreads-react-redux-fwd.netlify.app')
+
+			+gridMaker('Quote React App', 'portfolio/Quote-React-Router-App' ,'Quotes--RouterProject',false, false, 'react', false , 'https://mfayad-react-quotes-router-project.netlify.app')
 			
-			+gridMaker('Aero', 'portfolio/Aero' ,'Aero---Car-Accessories-Website')
+			+gridMaker('Cocktail', 'portfolio/Cocktails' ,'Cocktails',false, false, 'react', false , 'https://silver-cocktails-react-app.netlify.app/')
+
+			+gridMaker('Food Order', 'portfolio/Food-Order-App' ,'Food-Order-App',false, false, 'react', false , 'https://react-foodorder-cart.netlify.app/')
+
+
+
+
+
+			+gridMaker('Image Processing API', 'portfolio/image_processing_API' ,'image_processing_API',false, false, 'express')
 			
-			+gridMaker('EliteCrop', 'portfolio/EliteCrop' ,'Bootstrap_DesignThree/')
+			+gridMaker('Portfolio', 'portfolio/Portfolio' ,'Portfolio',false, false ,'UI')
+
+			+gridMaker('Weather App', 'portfolio/weatherApp' ,'fwd-weather-journal',false, false, 'express')
+
+			+gridMaker('Metis', 'portfolio/Metis' ,'Metis',false, false ,'UI')
 			
-			+gridMaker('AXIT', 'portfolio/AXIT' ,'Bootstrap_DesignTwo/')
+			+gridMaker('FoodCrush', 'portfolio/FoodCrush' ,'Foodie-Crush',false, false ,'UI', 'display: none')
 			
-			+gridMaker('Fayy', 'portfolio/Fayy' ,'Bootstrap_DesginOne' )
+			+gridMaker('Composition', 'portfolio/Composition' ,'Sass-Practical',false, false ,'UI', 'display: none')
+
+			+gridMaker('Blogs', 'portfolio/fwd-landingPage' ,'fwd-Landing-Page',false, false ,'UI', 'display: none')
 			
-			+gridMaker('Cola' , 'portfolio/Cola' ,'Cocacola-Template')
+			+gridMaker('Aero', 'portfolio/Aero' ,'Aero---Car-Accessories-Website',false, false ,'UI')
 			
-			+gridMaker('Leno', 'portfolio/Leno' ,'Special-Template')
+
+
+
+
+
+			+gridMaker('EliteCrop', 'portfolio/EliteCrop' ,'Bootstrap_DesignThree/',false, false ,'UI', 'display: none')
 			
-			+gridMaker('Modernist', 'portfolio/Modernist' ,'Modernist-Template')
+			+gridMaker('AXIT', 'portfolio/AXIT' ,'Bootstrap_DesignTwo/',false, false ,'UI', 'display: none')
 			
-			+gridMaker('Nyctophilus', 'portfolio/Nyctophilus' ,'Template-Three')
+			+gridMaker('Fayy', 'portfolio/Fayy' ,'Bootstrap_DesginOne' ,false, false ,'UI', 'display: none')
 			
-			+gridMaker('Kasper', 'portfolio/Kasper' ,'Template-Two')
+			+gridMaker('Cola' , 'portfolio/Cola' ,'Cocacola-Template',false, false ,'UI', 'display: none')
 			
-			+gridMaker('Leon', 'portfolio/Leon' ,'Template-one')
+			+gridMaker('Leno', 'portfolio/Leno' ,'Special-Template',false, false ,'UI', 'display: none')
+			
+			+gridMaker('Modernist', 'portfolio/Modernist' ,'Modernist-Template',false, false ,'UI', 'display: none')
+			
+			+gridMaker('Nyctophilus', 'portfolio/Nyctophilus' ,'Template-Three',false, false ,'UI', 'display: none')
+			
+			+gridMaker('Kasper', 'portfolio/Kasper' ,'Template-Two',false, false ,'UI', 'display: none')
+			
+			+gridMaker('Leon', 'portfolio/Leon' ,'Template-one',false, false ,'UI', 'display: none')
 

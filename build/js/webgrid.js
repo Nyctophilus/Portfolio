@@ -5,6 +5,27 @@
 const populateP = (projectName) => {
   const p = document.createElement("p");
   switch (projectName) {
+    case "My Reads":
+      p.textContent =
+        "A Bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.";
+      break;
+    case "Quote React App":
+      p.textContent =
+        "This is my Third react project. storing/adding quotes app utilizing all react feature during learning process upon using react-router.";
+      break;
+    case "Cocktail":
+      p.textContent =
+        "In this project, Implemented a search engine through cocktail API. using react/router, fetching and displaying cocktail by user demand.";
+      break;
+    case "Food Order":
+      p.textContent =
+        "This is my second completed react project. Food ordering app utilizing all react feature during learning process.";
+      break;
+    case "Image Processing API":
+      p.textContent =
+        "Server-Side Project. Image Processing App with an express server that manipulates images based on a server request with the dimensions and the image name.";
+      break;
+
     case "Portfolio":
       p.textContent =
         "My personal portfolio. A brief about my previous work and background. I tried to gather all my skills and tricks i've learnt so far building this website. It will be in continuous development!";
@@ -128,11 +149,13 @@ const createListOfIskills = (number) => {
 
 const specifySkills = (name) => {
   const skills = {
-      html: `<img src="https://symbols.getvecta.com/stencil_83/68_html5-icon.09e3da538e.svg" alt="html" width="40" height="40" />`,
+      html: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.png" alt="html" width="40" height="40" />`,
       css: `<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" alt="css" width="40" height="40"/>`,
       js: `<img src="https://symbols.getvecta.com/stencil_25/39_javascript.0ca26ec4ab.svg" alt="javascript" width="40" height="40"/>`,
+      ts: `<img src="https://img.icons8.com/color/344/typescript.png" width="40" height="40" alt="bootstrap"/>`,
       bootstrap: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" width="40" height="40" alt="bootstrap"/>`,
       react: `<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="react" width="40" height="40"/>`,
+      redux: `<img src="https://github.com/reduxjs.png" alt="react" width="40" height="40"/>`,
       sass: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" width="40" height="40" alt="sass"/>`,
       pug: `<img src="https://cdn.worldvectorlogo.com/logos/pugpugjs.svg" width="40" height="40" alt="pugjs"/>`,
       gulp: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg" width="40" height="40" alt="gulp"/>`,
@@ -145,6 +168,41 @@ const specifySkills = (name) => {
   let arrOfSkills;
 
   switch (name) {
+    case "My Reads":
+      arrOfSkills = createListOfIskills(3);
+      arrOfSkills[0].innerHTML = skills.react;
+      arrOfSkills[1].innerHTML = skills.css;
+      arrOfSkills[2].innerHTML = skills.git;
+      break;
+
+    case "Quote React App":
+      arrOfSkills = createListOfIskills(3);
+      arrOfSkills[0].innerHTML = skills.react;
+      arrOfSkills[1].innerHTML = skills.css;
+      arrOfSkills[2].innerHTML = skills.git;
+      break;
+
+    case "Cocktail":
+      arrOfSkills = createListOfIskills(3);
+      arrOfSkills[0].innerHTML = skills.react;
+      arrOfSkills[1].innerHTML = skills.css;
+      arrOfSkills[2].innerHTML = skills.git;
+      break;
+
+    case "Food Order":
+      arrOfSkills = createListOfIskills(3);
+      arrOfSkills[0].innerHTML = skills.react;
+      arrOfSkills[1].innerHTML = skills.css;
+      arrOfSkills[2].innerHTML = skills.git;
+      break;
+
+    case "Image Processing API":
+      arrOfSkills = createListOfIskills(3);
+      arrOfSkills[0].innerHTML = skills.ts;
+      arrOfSkills[1].innerHTML = skills.express;
+      arrOfSkills[2].innerHTML = skills.git;
+      break;
+
     case "Portfolio":
       arrOfSkills = createListOfIskills(5);
       arrOfSkills[0].innerHTML = skills.js;

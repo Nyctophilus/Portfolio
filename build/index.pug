@@ -9,6 +9,9 @@ html(lang="en")
 		title= title 
 		include ./pug/includes/styleLinks
 
+		//- scripts
+		script(nonce="random123" defer src="js/app.js")
+
 	body
 
 		//- loader state
@@ -39,9 +42,5 @@ html(lang="en")
 			
 			//- Contact Me Section
 			include ./pug/pages/contact
-		
-		
-		//- scripts
-		script(nonce="random123" src="js/app.js")
 
 

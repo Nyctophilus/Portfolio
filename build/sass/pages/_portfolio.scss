@@ -6,9 +6,52 @@ section.portfolio {
     }
   }
 
+  .filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 3.5rem;
+
+    li {
+      width: fit-content;
+      padding: 0.2rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      user-select: none;
+
+      span {
+        display: inline-block;
+        width: fit-content;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background: {
+          image: var(--grad-clr);
+          color: var(--theme-clr);
+        }
+        color: var(--theme-clr);
+      }
+
+      &.active,
+      &:hover {
+        background-image: var(--grad-clr);
+        span {
+          -webkit-text-fill-color: unset;
+          background: unset;
+          color: var(--bg-clr);
+        }
+      }
+    }
+  }
+
   .grid-web {
     .grid-item {
       height: 20vh;
+      transition: opacity var(--trans);
+
+      img {
+        height: 100%;
+      }
     }
 
     margin: {

@@ -114,3 +114,11 @@ main > section {
   animation: fallingSections 0.8s ease-in-out paused;
   transition: transform var(--trans);
 }
+
+.fadeIn {
+  opacity: 1;
+}
+
+.fadeOut {
+  opacity: 0;
+}
