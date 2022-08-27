@@ -5,6 +5,10 @@
 const populateP = (projectName) => {
   const p = document.createElement("p");
   switch (projectName) {
+    case "React DashBoard":
+      p.textContent =
+        "This is a Dashboard which used a lot of react functionality to create. It has Main, login, Register, Error Pages. user login authentication with firebase login tokens. Redux/toolkit used in state management.";
+      break;
     case "My Reads":
       p.textContent =
         "A Bookshelf app that allows you to select and categorize books you have read, are currently reading, or want to read. The project emphasizes using React to build the application and provides an API server and client library that you will use to persist information as you interact with the application.";
@@ -168,6 +172,14 @@ const specifySkills = (name) => {
   let arrOfSkills;
 
   switch (name) {
+    case "React DashBoard":
+      arrOfSkills = createListOfIskills(4);
+      arrOfSkills[0].innerHTML = skills.redux;
+      arrOfSkills[1].innerHTML = skills.react;
+      arrOfSkills[2].innerHTML = skills.sass;
+      arrOfSkills[3].innerHTML = skills.git;
+      break;
+
     case "My Reads":
       arrOfSkills = createListOfIskills(3);
       arrOfSkills[0].innerHTML = skills.react;
