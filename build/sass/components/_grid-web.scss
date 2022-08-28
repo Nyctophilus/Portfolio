@@ -4,6 +4,7 @@
     columns: repeat(auto-fit, minmax(20rem, 4fr));
     rows: auto;
   }
+  user-select: none;
 
   .grid-item {
     position: relative;
