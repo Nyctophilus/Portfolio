@@ -1,4 +1,9 @@
-const form_data = {};
+const form_data = {
+  name: "",
+  email: "",
+  subject: "",
+  msg: "",
+};
 
 /*
 	helper functions
@@ -13,6 +18,8 @@ const fetchFormData = () => {
     // filling obj with formData
     form_data[pair[0]] = pair[1];
   }
+
+  console.log(form_data);
 };
 
 const getValidationSpan = () => {
@@ -24,6 +31,21 @@ const getValidationSpan = () => {
       `#contact-form input[name="email"] + span`
     ),
   ].filter((validate) => validate);
+};
+
+const sendMessageToFireBase = () => {
+  console.log(form_data.msg);
+
+  fetch(
+    "https://react-my-burger-e68ad-default-rtdb.europe-west1.firebasedatabase.app/messages.json",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form_data),
+    }
+  );
 };
 
 /*
@@ -62,7 +84,6 @@ const correctValidation = (where) => {
 const submission = (e) => {
   // fetch form data
   fetchFormData();
-  // console.log(form_data);
 
   //   return the true condition which has the span next to it
   if (getValidationSpan()[0])
@@ -79,7 +100,7 @@ const submission = (e) => {
     if (!testName) {
       validateSpans(
         "name",
-        "Invalid User name!😔",
+        "Invalid User name!(only characters) 😔",
         document.createElement("span")
       );
     } else {
@@ -89,13 +110,15 @@ const submission = (e) => {
     if (!testMail) {
       validateSpans(
         "email",
-        "Invalid E-Mail Format!🙁",
+        "Invalid E-Mail Format!(example@xyz.(com|net|org))🙁",
         document.createElement("span")
       );
     } else {
       correctValidation("email");
       ThxPopup();
     }
+
+    if (form_data.msg) sendMessageToFireBase();
   } else {
     popMsg("", "Please, Enter your name and email");
   }
