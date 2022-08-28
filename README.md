@@ -13,7 +13,13 @@
 
 ### Overview
 
-My personal portfolio. I've tried to gather all my tricks & work-arounds I learnt so far in it, so it will serve as a showcase to my skills in the present!
+- My personal portfolio. I've tried to gather all the tricks & workarounds I learned so far, So it will serve as a showcase of my skills in the present!
+- I built the app without a framework to showcase I can build anything from scratch.
+- The App utilizes CRUD operations in the contact form. Also, the Idle state for the side controllers and many more js implemented functionalities are listed below.
+
+<br>
+<br>
+<br>
 
 ![Preview page](preview.webp)
 
@@ -84,7 +90,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] logo and header 'menu on mobile'
 - [x] lighting points around home section links, check the earthy bgs
 - [x] filter on the portfolio items
-- [ ] sending message at contact section actually function
+- [x] sending message at contact section actually function
 
 ### Timeline
 
