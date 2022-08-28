@@ -14,7 +14,7 @@
 ### Overview
 
 - My personal portfolio. I've tried to gather all the tricks & workarounds I learned so far, So it will serve as a showcase of my skills in the present!
-- I built the app without a framework to showcase I can build anything from scratch.
+- <strong>I built the app without a framework to showcase I can build anything from scratch.</strong>
 - The App utilizes CRUD operations in the contact form. Also, the Idle state for the side controllers and many more js implemented functionalities are listed below.
 
 <br>
