@@ -137,6 +137,7 @@ const populateP = (projectName) => {
 const closePreview = (btn) => {
   btn.addEventListener("click", () => {
     btn.parentElement.close();
+    btn.parentElement.remove();
   });
 };
 
@@ -314,6 +315,21 @@ const createDialog = (location, name, links) => {
   return dialog;
 };
 
+const attachClickEvent = (dialog) => {
+  const rect = dialog.getBoundingClientRect();
+  dialog.addEventListener("click", (e) => {
+    if (
+      e.clientY < rect.top ||
+      e.clientY > rect.bottom ||
+      e.clientX < rect.left ||
+      e.clientX > rect.right
+    ) {
+      dialog.close();
+      dialog.remove();
+    }
+  });
+};
+
 /*
 	events
 */
@@ -327,15 +343,18 @@ gridWeb.forEach((web) => {
     if (e.target.dataset.img) {
       const loc = e.target.dataset.img,
         name = e.target.dataset.name,
-        cloneLinks =
-          e.target.parentElement.nextElementSibling
-            .querySelector("div.links")
-            .cloneNode(true);
+        cloneLinks = (
+          e.target.parentElement.nextElementSibling ||
+          e.target.nextElementSibling
+        )
+          .querySelector("div.links")
+          .cloneNode(true);
 
       const dialog = createDialog(loc, name, cloneLinks);
       web.appendChild(dialog);
 
       dialog.showModal();
+      attachClickEvent(dialog);
     }
   });
 });

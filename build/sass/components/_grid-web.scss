@@ -61,7 +61,7 @@
     padding-bottom: 1rem;
 
     &::backdrop {
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(0, 0, 0, 0.6);
     }
 
     img {
@@ -96,7 +96,9 @@
     }
 
     h2 {
-      color: var(--theme-clr);
+      color: var(--bg-clr);
+      padding-inline: 1rem;
+      font-weight: bold;
       text-align: center;
       margin: {
         bottom: 0 !important;
