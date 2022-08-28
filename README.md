@@ -82,7 +82,7 @@ My personal portfolio. I've tried to gather all my tricks & work-arounds I learn
 - [x] interplacing moving animation on portfolio
 - [x] onScroll transformY the section from -100% to 0
 - [x] logo and header 'menu on mobile'
-- [ ] lighting points around home section links, check the earthy bgs
+- [x] lighting points around home section links, check the earthy bgs
 - [x] filter on the portfolio items
 - [ ] sending message at contact section actually function
 
