@@ -33,6 +33,8 @@ const toggleActiveSections = (con) => {
 
   //   save active section to localstorage
   saveToLocalStorage({ activeSection: section });
+
+  resetLightingDotsEvents();
 };
 
 const idleState = () => {
@@ -66,6 +68,34 @@ const idleState = () => {
 	helper function
 */
 
+const resetLightingDotsEvents = () => {
+  if (
+    !document
+      .querySelector("main > section.home")
+      .classList.contains("active")
+  ) {
+    console.log(`home isnt active!!`);
+    document
+      .querySelectorAll(
+        "section.home .text-content > .ripple"
+      )
+      .forEach((ripple) => {
+        ripple.removeEventListener(
+          "click",
+          activateSection
+        );
+      });
+  } else {
+    document
+      .querySelectorAll(
+        "section.home .text-content > .ripple"
+      )
+      .forEach((ripple) => {
+        ripple.addEventListener("click", activateSection);
+      });
+  }
+};
+
 const toggleHover = (c) => {
   c.classList.add("hover");
   c.addEventListener("mouseout", () =>
@@ -95,3 +125,25 @@ controllers.forEach((controller) => {
 
 // FIXDONE idle state... add this on con click and if not home only
 window.addEventListener("scroll", idleState);
+
+/*
+	lighting dots
+*/
+
+const activateSection = (e) => {
+  toggleActiveSections(e.target);
+
+  const myController = selectorG(
+    ".controls > .control"
+  ).filter(
+    (con) => con.dataset.sect === e.target.dataset.sect
+  );
+
+  toggleActiveControllers(...myController);
+};
+
+document
+  .querySelectorAll("section.home .text-content > .ripple")
+  .forEach((ripple) => {
+    ripple.addEventListener("click", activateSection);
+  });

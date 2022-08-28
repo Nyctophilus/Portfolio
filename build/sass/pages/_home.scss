@@ -34,9 +34,129 @@ body {
       .text-content {
         align-self: center;
         padding-right: 10rem;
+        position: relative;
 
         @include breakpoints(max-medium) {
           padding-right: unset;
+        }
+
+        .ripple {
+          display: grid;
+          background-color: var(--theme-clr);
+          width: 1rem;
+          height: 1rem;
+          border-radius: 50%;
+          animation: ripple 2s linear infinite;
+          position: absolute;
+          z-index: 99;
+
+          &[data-sect="about"] {
+            top: -60%;
+            left: 20%;
+          }
+          &[data-sect="skills"] {
+            top: -30%;
+            left: 70%;
+          }
+          &[data-sect="portfolio"] {
+            right: 50%;
+          }
+          &[data-sect="certfs"] {
+            bottom: -60%;
+            left: 30%;
+          }
+          &[data-sect="contact"] {
+            bottom: -25%;
+            left: 80%;
+          }
+
+          @include breakpoints(max-large) {
+            &[data-sect="about"] {
+              top: -30%;
+            }
+            &[data-sect="skills"] {
+              left: 90%;
+              top: 20%;
+            }
+            &[data-sect="portfolio"] {
+              bottom: -15%;
+            }
+          }
+
+          @include breakpoints(mobile) {
+            &[data-sect="about"] {
+              top: -20%;
+            }
+            &[data-sect="portfolio"] {
+              right: 60%;
+            }
+            &[data-sect="certfs"] {
+              bottom: -80%;
+              left: 10%;
+            }
+            &[data-sect="contact"] {
+              bottom: -100%;
+            }
+          }
+
+          &:hover {
+            &::before,
+            &::after {
+              animation: unset;
+              border-radius: unset;
+            }
+            &::before {
+              content: attr(data-sect);
+              position: absolute;
+              left: -1rem;
+              transform: translate(-100%, -28%);
+              color: #fff;
+              background-color: var(--lighty-clr);
+              padding: 0.5rem;
+              border-radius: 0.5rem;
+              font: {
+                size: 0.9rem;
+                style: oblique;
+              }
+            }
+            &::after {
+              content: "";
+              position: absolute;
+              left: -1rem;
+              border: {
+                width: 7px;
+                style: solid;
+                color: transparent transparent transparent
+                  var(--lighty-clr);
+              }
+            }
+
+            @include breakpoints(mobile) {
+              &[data-sect="certfs"]::before {
+                transform: translate(41%, -28%);
+              }
+              &[data-sect="certfs"]::after {
+                border-color: transparent var(--lighty-clr)
+                  transparent transparent;
+                left: 1rem;
+              }
+            }
+          }
+
+          &::before,
+          &::after {
+            content: "";
+            grid-area: 1/1;
+            border-radius: 50%;
+            animation: inherit;
+          }
+
+          &::before {
+            animation-delay: 1s;
+          }
+          &::after {
+            animation-delay: 2s;
+          }
         }
 
         h1 {
