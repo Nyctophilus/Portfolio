@@ -343,10 +343,7 @@ gridWeb.forEach((web) => {
     if (e.target.dataset.img) {
       const loc = e.target.dataset.img,
         name = e.target.dataset.name,
-        cloneLinks = (
-          e.target.parentElement.nextElementSibling ||
-          e.target.nextElementSibling
-        )
+        cloneLinks = e.target.parentElement
           .querySelector("div.links")
           .cloneNode(true);
 
