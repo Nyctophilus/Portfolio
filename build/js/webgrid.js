@@ -165,6 +165,8 @@ const specifySkills = (name) => {
       pug: `<img src="https://cdn.worldvectorlogo.com/logos/pugpugjs.svg" width="40" height="40" alt="pugjs"/>`,
       gulp: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gulp/gulp-plain.svg" width="40" height="40" alt="gulp"/>`,
       express: `<img src="https://w7.pngwing.com/pngs/925/447/png-transparent-express-js-node-js-javascript-mongodb-node-js-text-trademark-logo.png" width="40" height="40" alt="express"/>`,
+      firebase:
+        '<img src="https://github.com/firebase.png" width="40" height="40" alt="firebase"/>',
       git: `<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="40" height="40" alt="git"/>`,
     },
     container = document.createElement("div");
@@ -174,11 +176,12 @@ const specifySkills = (name) => {
 
   switch (name) {
     case "React DashBoard":
-      arrOfSkills = createListOfIskills(4);
+      arrOfSkills = createListOfIskills(5);
       arrOfSkills[0].innerHTML = skills.redux;
       arrOfSkills[1].innerHTML = skills.react;
       arrOfSkills[2].innerHTML = skills.sass;
-      arrOfSkills[3].innerHTML = skills.git;
+      arrOfSkills[3].innerHTML = skills.firebase;
+      arrOfSkills[4].innerHTML = skills.git;
       break;
 
     case "My Reads":
