@@ -91,6 +91,8 @@
 - [x] lighting points around home section links, check the earthy bgs
 - [x] filter on the portfolio items
 - [x] sending message at contact section actually function
+- [ ] scroll based moving through sections & animations
+- [ ] https://codepen.io/alexitaylor/pen/RgxJwg pacticles
 
 ### Timeline
 

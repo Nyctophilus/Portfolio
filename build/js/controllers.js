@@ -103,6 +103,19 @@ const toggleHover = (c) => {
   );
 };
 
+const transverseWithScroll = () => {
+  //   if (
+  //     window.innerHeight + window.scrollY >=
+  //     document.body.offsetHeight
+  //   )
+  //     console.log(`at bottom`);
+};
+
+const scrollEventHandler = () => {
+  transverseWithScroll();
+  idleState();
+};
+
 /*
 	Events
 */
@@ -124,7 +137,7 @@ controllers.forEach((controller) => {
 });
 
 // FIXDONE idle state... add this on con click and if not home only
-window.addEventListener("scroll", idleState);
+window.addEventListener("scroll", scrollEventHandler);
 
 /*
 	lighting dots
